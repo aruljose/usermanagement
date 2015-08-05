@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp', []);
+var app = angular.module('userManagementApp', []);
 app.controller('logincontroller', function ($scope) {
 
     // function to submit the form after all validation has occurred			
