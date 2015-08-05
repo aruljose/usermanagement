@@ -15,29 +15,29 @@ and open the template in the editor.
     </head>
     <body>
         <div ng-app="mainApp">
-        <div class="container" ng-controller="EnterpriseController">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Edit</th>
-                        <th>Name</th>
-                        <th>Contact</th>
-                        <th>Address</th>
-			<th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat = "enterprise in enterprises">
-                        <td><button type="button" class="btn btn-default">Edit</button></td>
-                        <td>{{enterprise.name}}</td>
-                        <td>{{enterprise.contact}}</td>
-                        <td>{{enterprise.address}}</td>
-			<td>{{enterprise.email}}</td>
-                    </tr>                    
-                </tbody>
-            </table>
-            <button type="button" class="btn btn-primary" ng-click="showForm()">Create enterprise</button>          
-		<div ng-show="mypopup" class="">
+            <div class="container" ng-controller="EnterpriseController">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Edit</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Address</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat = "enterprise in enterprises">
+                            <td><button type="button" class="btn btn-default">Edit</button></td>
+                            <td>{{enterprise.name}}</td>
+                            <td>{{enterprise.contact}}</td>
+                            <td>{{enterprise.address}}</td>
+                            <td>{{enterprise.email}}</td>
+                        </tr>                    
+                    </tbody>
+                </table>
+                <button type="button" class="btn btn-primary" ng-click="showForm()">Create enterprise</button>          
+                <div ng-show="mypopup" class="">
                     <form class="form-horizontal" role="form">
                         <div class="form-group">
                             <label class="control-label col-sm-3" for="enterprise.name">Enterprise Name:</label>
@@ -70,7 +70,7 @@ and open the template in the editor.
                         </div>
                     </form>
                 </div>
-        </div>
+            </div>
         </div>
     </body>
 </html>
