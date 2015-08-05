@@ -2,7 +2,7 @@ var mainApp = angular.module("mainApp", []);
 
 mainApp.controller('EnterpriseController', ['$scope', function ($scope) {
         $scope.showForm = function () {
-            $scope.mypopup = true;
+            $scope.enterprisepopup = true;
         }
         $scope.enterprises = [];
         $scope.saveEnterprise = function () {
