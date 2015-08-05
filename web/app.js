@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('userManagement', ['ngRoute']);
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
             .when('/login',
