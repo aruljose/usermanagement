@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <form ng-contoller="logincontroller" class="form-inline" name="userForm" ng-submit="submitForm()" novalidate>
+
+            <div class="well">
+                <img src="images/login.png"><br/>
+
+                <div ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                    <label for="email">Username :</label>   
+                    <input type="email" class="form-control" placeholder="Enter Email" ng-model="email" />
+                    <!--<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>-->
+                </div><br/>
+
+                <div ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+                    <label for="password">Password :</label>  
+                    <input type="password" class="form-control" placeholder="Enter Password" ng-model="password" ng-minlength="6" ng-maxlength="10"/>
+                    <!-- <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Enter a valid password.</p>-->
+                </div><br/>
+
+                <input type="radio" name="name" value="user"/> User
+                <input type="radio" name="name" value="enterprise"/> Enterprise
+                <input type="radio" name="name" value="admin"/> Admin <br></br>
+
+                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+                <button type="reset" class="btn btn-success">Reset</button>
+
+            </div>
+
+        </form>
+
+    </body>
+</html>
