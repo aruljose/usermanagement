@@ -9,10 +9,13 @@ and open the template in the editor.
         <title>Enterprise View</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="enterprisecontroller.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div ng-app="mainApp">
+        <div class="container" ng-controller="EnterpriseController">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -34,7 +37,9 @@ and open the template in the editor.
 
 
 
-            <button type="button" class="btn btn-primary">Create User</button>            
+            <button type="button" class="btn btn-primary" ng-click="show()">Create User</button>  
+            
+            
 
             <div class="form-group col-md-2 pull-right">
                 <select class="form-control">
@@ -44,10 +49,15 @@ and open the template in the editor.
                     <option>Enterprise3</option>
 
                 </select>
-            </div>
+            </div> 
+            
+            
+            
 
 
         </div>
+        </div>
+        
 
     </body>
 </html>

@@ -9,10 +9,13 @@ and open the template in the editor.
         <title>Admin View</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="admincontroller.js"></script>
     </head>
     <body>
-        <div class="container">
+        <div ng-app="mainApp">
+        <div class="container" ng-controller="AdminController">
             <table class="table table-striped">
                 <thead>
                     <tr>
@@ -32,8 +35,9 @@ and open the template in the editor.
                 </tbody>
             </table>
             
-            <button type="button" class="btn btn-primary">Create User</button>
+            <button type="button" class="btn btn-primary" ng-click="showAdmin()">Create User</button>
 
+        </div>
         </div>
     </body>
 </html>
