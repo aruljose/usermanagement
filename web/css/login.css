@@ -4,17 +4,14 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Aug 3, 2015, 6:11:42 PM
+    Created on : Aug 4, 2015, 2:48:41 PM
     Author     : arun
 */
-.header{
-    float: right;     
-}
-.login{
-    // width: 70%;
-    text-align: center;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-top: 5%;
-}
 
+.form-inline{
+    float:right;
+}
+.well{
+    margin-left: 10%;
+    //margin-right: 30%;
+}
