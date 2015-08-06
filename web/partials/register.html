@@ -19,50 +19,49 @@ and open the template in the editor.
 
             <div class="jumbotron">
                 <h2>Enterprise Register</h2><br/>
-                <!--<img src="Registration.png"><br/>-->
-              
-                    <div class="form-group">
-                        <div ng-class="{ 'has-error' : registerForm.firstname.$invalid && !registerForm.firstname.$pristine }">
+
+                <div class="form-group">
+                    <div ng-class="{ 'has-error' : registerForm.firstname.$invalid && !registerForm.firstname.$pristine }">
                         <label for="firstname" class="col-lg-2">Firstname</label>
                         <div class="col-sm-offset-5">
                             <input type="text" class="form-control" placeholder="Enter FirstName" ng-model="firstname" ng-minlength="4" ng-maxlength="10"/>
                         </div>
-                        </div><br/>
-                    
-                        <div ng-class="{ 'has-error' : registerForm.lastname.$invalid && !registerForm.lastname.$pristine }">
+                    </div><br/>
+
+                    <div ng-class="{ 'has-error' : registerForm.lastname.$invalid && !registerForm.lastname.$pristine }">
                         <label for="lastname" class="col-lg-2">Lastname</label>
                         <div class="col-sm-offset-5">
                             <input type="lastname" class="form-control" placeholder="Enter LastName" ng-model="lastname" ng-minlength="4" ng-maxlength="10"/>
                         </div>
-                        </div></br>
-                        
-                        <div ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
+                    </div></br>
+
+                    <div ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
                         <label for="email" class="col-lg-2">Email</label>
                         <div class="col-sm-offset-5">
                             <input type="email" class="form-control" placeholder="Enter Email" ng-model="email"/>
                         </div>
-                        </div></br>
-                        
-                        <div ng-class="{ 'has-error' : registerForm.password.$invalid && !registerForm.password.$pristine }">
+                    </div></br>
+
+                    <div ng-class="{ 'has-error' : registerForm.password.$invalid && !registerForm.password.$pristine }">
                         <label for="password" class="col-lg-2">Password</label>
                         <div class="col-sm-offset-5">
                             <input type="password" class="form-control" placeholder="Enter Password" ng-model="password" ng-minlength="4" ng-maxlength="10"/>
                         </div>
-                        </div><br/>
-                        
-                        <div ng-class="{ 'has-error' : registerForm.confirmpassword.$invalid && !registerForm.confirmpassword.$pristine }">
+                    </div><br/>
+
+                    <div ng-class="{ 'has-error' : registerForm.confirmpassword.$invalid && !registerForm.confirmpassword.$pristine }">
                         <label for="confirmpassword" class="col-lg-2">ConfirmPassword</label>
                         <div class="col-sm-offset-5">
                             <input type="confirmpassword" class="form-control" placeholder="Enter ConfirmPassword" ng-model="confirmpassword" ng-minlength="4" ng-maxlength="10"/>
                         </div>
-                        </div>
-                        
-                    </div><br></br>
-                
-                    <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Submit</button>
-                        <a href="#/login" class="btn btn-default">Cancel</a>
+                    </div>
 
-                
+                </div><br></br>
+
+                <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Submit</button>
+                <a href="#/login" class="btn btn-default">Cancel</a>
+
+
             </div>
         </form>
 
