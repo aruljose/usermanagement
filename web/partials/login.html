@@ -21,14 +21,12 @@ and open the template in the editor.
 
                 <div ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
                     <label for="email">Username :</label>   
-                    <input type="email" class="form-control" placeholder="Enter Email" ng-model="email" />
-                    <!--<p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>-->
+                    <input type="email" class="form-control" placeholder="Enter Email" ng-model="email"/>
                 </div><br/>
 
                 <div ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
                     <label for="password">Password :</label>  
                     <input type="password" class="form-control" placeholder="Enter Password" ng-model="password" ng-minlength="6" ng-maxlength="10"/>
-                    <!-- <p ng-show="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Enter a valid password.</p>-->
                 </div><br/>
 
                 <input type="radio" name="name" value="user" checked/> User
