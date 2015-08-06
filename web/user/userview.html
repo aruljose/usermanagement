@@ -1,136 +1,120 @@
-<!--
-To change this template, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>User View</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="usercontroller.js"></script>
+<body>
+    <div>
+        <div class="container">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Edit</th>
+                        <th>FirstName</th>
+                        <th>LastName</th>
+                        <th>Password</th>
+                        <th>Email</th>
+                        <th>Enterprise</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="user in users">
 
-    </head>
-    <body>
-        <div ng-app="mainApp">
-            <div class="container" ng-controller="UserController">
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Edit</th>
-                            <th>FirstName</th>
-                            <th>LastName</th>
-                            <th>Password</th>
-                            <th>Email</th>
-                            <th>Enterprise</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr ng-repeat="user in users">
+                        <td><button type="button" class="btn btn-default">Edit</button></td>
+                        <td>{{user.firstname}}</td>
+                        <td>{{user.lastname}}</td>
+                        <td>{{user.password}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.enterprise}}</td>
+                    </tr>                    
+                </tbody>
+            </table>
 
-                            <td><button type="button" class="btn btn-default">Edit</button></td>
-                            <td>{{user.firstname}}</td>
-                            <td>{{user.lastname}}</td>
-                            <td>{{user.password}}</td>
-                            <td>{{user.email}}</td>
-                            <td>{{user.enterprise}}</td>
-                        </tr>                    
-                    </tbody>
-                </table>
+            <div>
+                <button type="button" class="btn btn-primary" ng-click="showUserForm()">Create User</button>
+            </div><br>
 
-                <div>
-                    <button type="button" class="btn btn-primary" ng-click="showUserForm()">Create User</button>
-                </div><br>
-
-                <div ng-show="userFormPopup">
+            <div ng-show="userFormPopup">
 
 
-                    <form name="userFormRegister" class="form-horizontal"  ng-submit="saveUser()" novalidate>
+                <form name="userFormRegister" class="form-horizontal"  ng-submit="saveUser()" novalidate>
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="user.firstname">FirstName:</label>
-                            <div class="col-sm-2">
-                                <input type="text" name="firstname"  ng-model="user.firstname" class="form-control" id="user.firstname" placeholder="First Name"
-                                       required>
-                            </div>
-                            <div ng-messages="user.firstname.$error">
-
-                                <span class="text-danger" ng-show="submitted && userFormRegister.firstname.$error.required">First name required</span>
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="user.firstname">FirstName:</label>
+                        <div class="col-sm-2">
+                            <input type="text" name="firstname"  ng-model="user.firstname" class="form-control" id="user.firstname" placeholder="First Name"
+                                   required>
                         </div>
+                        <div ng-messages="user.firstname.$error">
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="user.lastname">LastName:</label>
-                            <div class="col-sm-2">
-                                <input type="text" name="lastname"  ng-model="user.lastname" class="form-control" id="user.lastname" placeholder="Last Name"
-                                       required>
-                            </div>
-                            <div ng-messages="user.lastname.$error">
-
-                                <span class="text-danger" ng-show="submitted && userFormRegister.lastname.$error.required">Last name required</span>
-                            </div>
+                            <span class="text-danger" ng-show="submitted && userFormRegister.firstname.$error.required">First name required</span>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="user.password">Password:</label>
-                            <div class="col-sm-2">          
-                                <input type="password" name="password" ng-model="user.password" class="form-control" id="user.password" placeholder="Password"
-                                       required>
-                            </div>
-                            <div ng-messages="user.password.$error">
-
-                                <span class="text-danger" ng-show="submitted && userFormRegister.password.$error.required">Password required</span>
-                            </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="user.lastname">LastName:</label>
+                        <div class="col-sm-2">
+                            <input type="text" name="lastname"  ng-model="user.lastname" class="form-control" id="user.lastname" placeholder="Last Name"
+                                   required>
                         </div>
+                        <div ng-messages="user.lastname.$error">
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="user.email">Email:</label>
-                            <div class="col-sm-2">
-                                <input type="email" name="email" ng-model="user.email" class="form-control" id="user.email" placeholder="Enter Valid Email"
-                                       required>
-                            </div>
-                            <div ng-messages="user.email.$error">
-                                <span class="text-danger"  ng-show="submitted && userFormRegister.email.$error.required">Email required</span>
-
-                                <span class="text-danger" ng-show="submitted && userFormRegister.email.$error.email">Invalid email</span>
-                            </div>
+                            <span class="text-danger" ng-show="submitted && userFormRegister.lastname.$error.required">Last name required</span>
                         </div>
+                    </div>
 
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="enterprise">Enterprise:</label>
-                            <div class="col-sm-2">
-                                <select class="form-control" ng-model="user.enterprise" name="enterprise" required>
-                                    <option ng-disabled="true">Select Enterprise</option>
-                                    <option>Oracle</option>
-                                    <option>RedHat</option>
-                                    <option>Linux</option>
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="user.password">Password:</label>
+                        <div class="col-sm-2">          
+                            <input type="password" name="password" ng-model="user.password" class="form-control" id="user.password" placeholder="Password"
+                                   required>
+                        </div>
+                        <div ng-messages="user.password.$error">
 
-                                </select>
-                            </div>
-                            <div ng-messages="user.enterprise.$error">
-                                <span class="text-danger"  ng-show="submitted && userFormRegister.enterprise.$error.required">Select Enterprise</span></div>
+                            <span class="text-danger" ng-show="submitted && userFormRegister.password.$error.required">Password required</span>
+                        </div>
+                    </div>
 
-                        </div>                       
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="user.email">Email:</label>
+                        <div class="col-sm-2">
+                            <input type="email" name="email" ng-model="user.email" class="form-control" id="user.email" placeholder="Enter Valid Email"
+                                   required>
+                        </div>
+                        <div ng-messages="user.email.$error">
+                            <span class="text-danger"  ng-show="submitted && userFormRegister.email.$error.required">Email required</span>
+
+                            <span class="text-danger" ng-show="submitted && userFormRegister.email.$error.email">Invalid email</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-sm-3" for="enterprise">Enterprise:</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" ng-model="user.enterprise" name="enterprise" required>
+                                <option ng-disabled="true">Select Enterprise</option>
+                                <option>Oracle</option>
+                                <option>RedHat</option>
+                                <option>Linux</option>
+
+                            </select>
+                        </div>
+                        <div ng-messages="user.enterprise.$error">
+                            <span class="text-danger"  ng-show="submitted && userFormRegister.enterprise.$error.required">Select Enterprise</span></div>
+
+                    </div>                       
 
 
-                        <div class="form-group">        
-                            <div class="col-sm-offset-4 col-sm-10">
-                                <button type="submit"  class="btn btn-default" ng-click="submitted = true">Submit</button>
-                            </div>
-                        </div>                        
+                    <div class="form-group">        
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <button type="submit"  class="btn btn-default" ng-click="submitted = true">Submit</button>
+                        </div>
+                    </div>                        
 
-                    </form>
-
-
-                </div>
-
+                </form>
 
 
             </div>
-        </div>
 
-    </body>
-</html>
+
+
+        </div>
+    </div>
+
+</body>
+

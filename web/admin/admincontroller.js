@@ -1,9 +1,8 @@
 
 
-angular.module("mainApp", []).controller('AdminController', ['$scope', function ($scope) {
+app.controller('AdminController', ['$scope', function ($scope) {
         $scope.showAdminPopup = function () {
 
-            //alert("admin");
             $scope.adminFormPopup = true;
 
         };
