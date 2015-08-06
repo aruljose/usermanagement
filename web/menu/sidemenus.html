@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-    <title>SideMenu</title>
-
-    <link href="sidemenu.css" rel="stylesheet">
+<title>SideMenu</title>
+<link href="sidemenu.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>  
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
-
-
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-
 <body ng-app = "myApp">
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
+<div id="wrapper">
+<div class = "navbar navbar-inverse header">
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    
-                      <h4>  User Management </h4>
-                    
-                </li>
+		<h4>  User Management </h4>
+		</li>
                 <li>
                     <a href="#">User</a>
                 </li>
@@ -39,13 +26,20 @@
                 <li>
                     <a href="#">Admin</a>
                 </li>
-                
             </ul>
         </div>
-        <ng-view></ng-view>
-        
+<a href="#menu-toggle" id="menu-toggle">
+<img src="toggles.png" class="pull-left" height = "40px"/>
+</a>
+<img src="logo.png" class="pull-left" height = "40px"/>        
     </div>
-
-</body>
+        <ng-view></ng-view>
+    </div>
+<div class = "navbar-fixed-bottom navbar-inverse header">
+<div class = "footer">
+ <p>Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>
+</div>
+</div>
 <script src = "sidemenuController.js"></script>
+</body>
 </html>
