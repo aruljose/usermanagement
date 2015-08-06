@@ -13,14 +13,14 @@ angular.module("mainApp", []).controller('AdminController', ['$scope', function 
         $scope.saveAdmin = function () {
             $scope.admins.push({
                 name: $scope.admin.name,
-                contact: $scope.admin.contact,
+                address: $scope.admin.address,
                 email: $scope.admin.email,
                 phonenumber: $scope.admin.phonenumber
 
             });
 
             $scope.admin.name = "";
-            $scope.admin.contact = "";
+            $scope.admin.address = "";
             $scope.admin.email = "";
             $scope.admin.phonenumber = "";
 
