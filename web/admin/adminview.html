@@ -22,7 +22,7 @@ and open the template in the editor.
                         <tr>
                             <th>Edit</th>
                             <th>Name</th>
-                            <th>Contact</th>
+                            <th>Address</th>
                             <th>Email</th> 
                             <th>PhoneNo</th>
 
@@ -33,9 +33,9 @@ and open the template in the editor.
 
                             <td><button type="button" class="btn btn-default">Edit</button></td>
                             <td>{{admin.name}}</td>
-                            <td>{{admin.contact}}</td>
-                            <td>{{admin.phonenumber}}</td>
+                            <td>{{admin.address}}</td>
                             <td>{{admin.email}}</td>
+                            <td>{{admin.phonenumber}}</td>
                         </tr>                    
                     </tbody>
                 </table>
@@ -47,39 +47,60 @@ and open the template in the editor.
                 <div ng-show="adminFormPopup">
 
 
-                    <form class="form-horizontal" role="form" ng-submit="saveAdmin()">
+                    <form name="adminFormRegister" class="form-horizontal" role="form" ng-submit="saveAdmin()" novalidate>
 
                         <div class="form-group">
                             <label class="control-label col-sm-3" for="admin.name">Name:</label>
                             <div class="col-sm-2">
-                                <input type="text" name="admin.name"  ng-model="admin.name" class="form-control" id="admin.name" placeholder="Name">
+                                <input type="text" name="name"  ng-model="admin.name" class="form-control" id="admin.name" placeholder="Name"
+                                       required>
+                            </div>
+                            <div ng-messages="admin.name.$error">
+
+                                <span class="text-danger" ng-show="submitted && adminFormRegister.name.$error.required">Name required</span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3" for="contact">Contact:</label>
-                            <div class="col-sm-2">          
-                                <input type="text" name="admin.contact" ng-model="admin.contact" class="form-control" id="admin.contact" placeholder="Contact">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <label class="control-label col-sm-3" for="admin.address">Address:</label>
                             <div class="col-sm-2">
-                                <input type="text" name="admin.email" ng-model="admin.email" class="form-control" id="admin.email" placeholder="Enter Valid Email">
+                                <input type="text" name="address"  ng-model="admin.address" class="form-control" id="admin.address" placeholder="Address"
+                                       required>
+                            </div>
+                            <div ng-messages="admin.address.$error">
+
+                                <span class="text-danger" ng-show="submitted && adminFormRegister.address.$error.required">Address required</span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3" for="phonenumber">Password:</label>
-                            <div class="col-sm-2">          
-                                <input type="text" name="admin.phonenumber" ng-model="admin.phonenumber" class="form-control" id="admin.phonenumber" placeholder="PhoneNo">
+                            <label class="control-label col-sm-3" for="admin.email">Email:</label>
+                            <div class="col-sm-2">
+                                <input type="email" name="email" ng-model="admin.email" class="form-control" id="admin.email" placeholder="Enter Valid Email"
+                                       required>
+                            </div>
+                            <div ng-messages="admin.email.$error">
+                                <span class="text-danger"  ng-show="submitted && adminFormRegister.email.$error.required">Email required</span>
+
+                                <span class="text-danger" ng-show="submitted && adminFormRegister.email.$error.email">Invalid email</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="admin.phonenumber">Phone Number:</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="phonenumber"  ng-model="admin.phonenumber" class="form-control" id="admin.phonenumber" placeholder="Phone Number"
+                                       required maxlength="10">
+                            </div>
+                            <div ng-messages="admin.phonenumber.$error">
+
+                                <span class="text-danger" ng-show="submitted && adminFormRegister.phonenumber.$error.required">Phone Number required</span>
                             </div>
                         </div>
 
                         <div class="form-group">        
                             <div class="col-sm-offset-4 col-sm-10">
-                                <button type="submit" class="btn btn-default" >Submit</button>
+                                <button type="submit" class="btn btn-default" ng-click="submitted = true">Submit</button>
                             </div>
                         </div>                        
 

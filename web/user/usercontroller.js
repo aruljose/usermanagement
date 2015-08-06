@@ -22,6 +22,8 @@ angular.module("mainApp", []).controller('UserController', ['$scope', function (
             $scope.user.password = "";
             $scope.user.email = "";
             $scope.user.enterprise = "";
+            
+            
 
         };
 

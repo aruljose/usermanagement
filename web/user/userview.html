@@ -48,40 +48,61 @@ and open the template in the editor.
                 <div ng-show="userFormPopup">
 
 
-                    <form class="form-horizontal" role="form" ng-submit="saveUser()">
+                    <form name="userFormRegister" class="form-horizontal"  ng-submit="saveUser()" novalidate>
 
                         <div class="form-group">
                             <label class="control-label col-sm-3" for="user.firstname">FirstName:</label>
                             <div class="col-sm-2">
-                                <input type="text" name="user.firstname"  ng-model="user.firstname" class="form-control" id="user.firstname" placeholder="First Name">
+                                <input type="text" name="firstname"  ng-model="user.firstname" class="form-control" id="user.firstname" placeholder="First Name"
+                                       required>
+                            </div>
+                            <div ng-messages="user.firstname.$error">
+
+                                <span class="text-danger" ng-show="submitted && userFormRegister.firstname.$error.required">First name required</span>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label class="control-label col-sm-3" for="lastname">LastName:</label>
-                            <div class="col-sm-2">          
-                                <input type="text" name="user.lastname" ng-model="user.lastname" class="form-control" id="user.lastname" placeholder="Last Name">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="password">Password:</label>
-                            <div class="col-sm-2">          
-                                <input type="password" name="user.password" ng-model="user.password" class="form-control" id="user.password" placeholder="Password">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <label class="control-label col-sm-3" for="user.lastname">LastName:</label>
                             <div class="col-sm-2">
-                                <input type="text" name="user.email" ng-model="user.email" class="form-control" id="user.email" placeholder="Enter Valid Email">
+                                <input type="text" name="lastname"  ng-model="user.lastname" class="form-control" id="user.lastname" placeholder="Last Name"
+                                       required>
+                            </div>
+                            <div ng-messages="user.lastname.$error">
+
+                                <span class="text-danger" ng-show="submitted && userFormRegister.lastname.$error.required">Last name required</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="user.password">Password:</label>
+                            <div class="col-sm-2">          
+                                <input type="password" name="password" ng-model="user.password" class="form-control" id="user.password" placeholder="Password"
+                                       required>
+                            </div>
+                            <div ng-messages="user.password.$error">
+
+                                <span class="text-danger" ng-show="submitted && userFormRegister.password.$error.required">Password required</span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="user.email">Email:</label>
+                            <div class="col-sm-2">
+                                <input type="email" name="email" ng-model="user.email" class="form-control" id="user.email" placeholder="Enter Valid Email"
+                                       required>
+                            </div>
+                            <div ng-messages="user.email.$error">
+                                <span class="text-danger"  ng-show="submitted && userFormRegister.email.$error.required">Email required</span>
+
+                                <span class="text-danger" ng-show="submitted && userFormRegister.email.$error.email">Invalid email</span>
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label class="control-label col-sm-3" for="enterprise">Enterprise:</label>
                             <div class="col-sm-2">
-                                <select class="form-control" ng-model="user.enterprise">
+                                <select class="form-control" ng-model="user.enterprise" name="enterprise" required>
                                     <option ng-disabled="true">Select Enterprise</option>
                                     <option>Enterprise1</option>
                                     <option>Enterprise2</option>
@@ -89,11 +110,15 @@ and open the template in the editor.
 
                                 </select>
                             </div>
-                        </div>
+                            <div ng-messages="user.enterprise.$error">
+                                <span class="text-danger"  ng-show="submitted && userFormRegister.enterprise.$error.required">Select Enterprise</span></div>
+
+                        </div>                       
+
 
                         <div class="form-group">        
                             <div class="col-sm-offset-4 col-sm-10">
-                                <button type="submit"  class="btn btn-default" >Submit</button>
+                                <button type="submit"  class="btn btn-default" ng-click="submitted = true">Submit</button>
                             </div>
                         </div>                        
 
