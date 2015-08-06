@@ -1,6 +1,6 @@
-var mainApp = angular.module("mainApp", []);
 
-mainApp.controller('EnterpriseController', ['$scope', function ($scope) {
+
+app.controller('EnterpriseController', ['$scope', function ($scope) {
         $scope.showForm = function () {
             $scope.enterprisepopup = true;
         }

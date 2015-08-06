@@ -1,5 +1,5 @@
 
-angular.module("mainApp", []).controller('UserController', ['$scope', function ($scope) {
+app.controller('UserController', ['$scope', function ($scope) {
         $scope.showUserForm = function () {
 
             $scope.userFormPopup = true;
