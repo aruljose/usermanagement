@@ -1,43 +1,97 @@
-<!DOCTYPE html>
 <!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
+To change this template, choose Tools | Templates
 and open the template in the editor.
 -->
+<!DOCTYPE html>
 <html>
     <head>
         <title>Admin View</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="admincontroller.js"></script>
+
     </head>
     <body>
         <div ng-app="mainApp">
-        <div class="container" ng-controller="AdminController">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Edit</th>
-                        <th>FirstName</th>
-                        <th>LastName</th>
-                        <th>Email</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><button type="button" class="btn btn-default">Edit</button></td>
-                        <td>{{firstname}}</td>
-                        <td>{{lastname}}</td>
-                        <td>{{email}}</td>
-                    </tr>                    
-                </tbody>
-            </table>
-            
-            <button type="button" class="btn btn-primary" ng-click="showAdmin()">Create User</button>
+            <div class="container" ng-controller="AdminController">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Edit</th>
+                            <th>Name</th>
+                            <th>Contact</th>
+                            <th>Email</th> 
+                            <th>PhoneNo</th>
 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="admin in admins">
+
+                            <td><button type="button" class="btn btn-default">Edit</button></td>
+                            <td>{{admin.name}}</td>
+                            <td>{{admin.contact}}</td>
+                            <td>{{admin.phonenumber}}</td>
+                            <td>{{admin.email}}</td>
+                        </tr>                    
+                    </tbody>
+                </table>
+
+                <div>
+                    <button type="button" class="btn btn-primary" ng-click="showAdminPopup()">Create Admin</button>
+                </div><br>
+
+                <div ng-show="adminFormPopup">
+
+
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="admin.name">Name:</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="admin.name"  ng-model="admin.name" class="form-control" id="admin.name" placeholder="Name">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="contact">Contact:</label>
+                            <div class="col-sm-2">          
+                                <input type="text" name="admin.contact" ng-model="admin.contact" class="form-control" id="admin.contact" placeholder="Contact">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <div class="col-sm-2">
+                                <input type="text" name="admin.email" ng-model="admin.email" class="form-control" id="admin.email" placeholder="Enter Valid Email">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="phonenumber">Password:</label>
+                            <div class="col-sm-2">          
+                                <input type="text" name="admin.phonenumber" ng-model="admin.phonenumber" class="form-control" id="admin.phonenumber" placeholder="PhoneNo">
+                            </div>
+                        </div>
+
+                        <div class="form-group">        
+                            <div class="col-sm-offset-4 col-sm-10">
+                                <button type="submit" ng-click="saveAdmin()" class="btn btn-default" >Submit</button>
+                            </div>
+                        </div>                        
+
+                    </form>
+
+
+                </div>
+
+
+
+            </div>
         </div>
-        </div>
+
     </body>
 </html>
