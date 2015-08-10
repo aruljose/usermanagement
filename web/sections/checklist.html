@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
+        <script src="http://code.angularjs.org/1.2.5/angular.js"></script>
+        <script src="checklist.js"></script>
+
+    </head>
+    <body>
+        <div class="">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#checklist">Checklist</a></li>
+                <li><a data-toggle="tab" href="#guidelines">Guidelines</a></li>
+            </ul><br/>
+
+            <div class="tab-content">
+                <div id="checklist" class="tab-pane fade">
+                    <div ng-app class="container">
+                        <h2>CheckList</h2>
+                        <div ng-controller="ChecklistController">
+                            <div>
+                                <div ng-repeat="checklist in checklists">
+                                    <p ng-model="checklist.done"></p>
+                                    <span class="done-{{checklist.done}}">{{$index + 1}}.{{checklist.text}}</span>
+                                </div>
+                            </div>
+                            <form ng-submit="addChecklist()">
+                                <input type="text" ng-model="checklistText"  size="30"
+                                       placeholder="add new checklist here">
+                                <input class="btn-primary" type="submit" value="+"><br><br/>
+                                <button class="btn btn-success">Save</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="guidelines" class="tab-pane fade">
+                    <h2>Guidelines</h2>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
