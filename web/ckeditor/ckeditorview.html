@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex, nofollow">
+	<title>CkEditor</title>
+	<script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+	<link href="http://sdk.ckeditor.com/theme/css/sdk-inline.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.js"></script>  
+
+</head>
+<body>
+<div ng-app = "ckeditorApp" ng-controller = "ckEditor">
+	<textarea style="visibility: hidden;" id="editor" name="editor" ng-model="editor">		
+	</textarea>
+<button id="btnSave" ng-click="save()">Save</button>
+<button ng-click="toggleckeditclose()">Cancel</button>
+</span>
+        <span ng-show="ckeditorHide"></span>
+<div type="text" ng-bind-html-unsafe="editor"></div>
+</div>
+<script src = "ckeditor.js"></script>
+</body>
+</html>
