@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+                        <h2>CheckList</h2>
+                        <div ng-controller="ChecklistController">
+                            <div>
+                                <div ng-repeat="checklist in checklists">
+                                    <p ng-model="checklist.done"></p>
+                                    <span class="done-{{checklist.done}}">{{$index + 1}}.{{checklist.text}}</span>
+                                </div>
+                            </div>
+                            <form ng-submit="addChecklist()">
+                                <input type="text" ng-model="checklistText"  size="30"
+                                       placeholder="add new checklist here">
+                                <input class="btn-primary" type="submit" value="+">
+                            </form><br/>
+                            <button class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+    </body>
+</html>
