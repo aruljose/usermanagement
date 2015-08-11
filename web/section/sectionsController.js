@@ -9,7 +9,7 @@ var app = angular.module('userManagementApp', []);
       
       }]);
       
-    /*  app.$inject = ['$scope'];
+     app.$inject = ['$scope'];
       
        app.directive("boxCreator", function($compile,$window){   
       return{
@@ -27,7 +27,7 @@ var app = angular.module('userManagementApp', []);
             }
         }
     }
-    });*/
+    });
       
       
     
