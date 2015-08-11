@@ -1,1 +1,1 @@
-var app = angular.module("userManagementApp", []);
+var app = angular.module("userManagementApp", ['ngRoute']);
