@@ -1,11 +1,11 @@
 .table, .modal-title {
-text-align: center;
+    text-align: center;
 }
 .modal-dialog {
-right:25px;
+    right:25px;
 }
 .container {
-left:40px;
+    left:40px;
 }
 .table > thead > tr > th {
     text-align: center;

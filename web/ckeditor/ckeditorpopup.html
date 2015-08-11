@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>  
+<html lang="en">
+    <head>  
         <title>CheckList $ GuideLine</title>  
         <meta charset="utf-8">  
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,7 +22,7 @@
                 <div class="modal-content">        
                     <div class="modal-header ">          
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Guide Line</h4>                
+                        <h4 class="modal-title">Guidelines</h4>                
                     </div>      
                     <textarea style="visibility: hidden;" id="editor" name="editor" ng-model="editor">
                     </textarea>
@@ -34,7 +35,7 @@
                 <div class="modal-content">        
                     <div class="modal-header">  
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Check List</h4>          
+                        <h4 class="modal-title">Checklists</h4>          
                     </div>
                     <table class="table table-bordered table-condensed" >                
                         <thead>                   
@@ -55,8 +56,7 @@
                     </table>       
                     <div class="modal-footer">
                         <button class="btn btn-primary" id="btnSave" ng-click="save()" data-dismiss="modal">Save</button>           
-                        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>      
+                        <button class="btn btn-warning" data-dismiss="modal">Cancel</button>                            
                     </div>
                 </div>
             </div>
