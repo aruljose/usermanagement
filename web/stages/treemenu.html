@@ -5,6 +5,7 @@
     
     <button class=" btn btn-success btn-xs" ng-click="add(data)" >+</button>
     <button class="btn btn-default btn-xs" ng-click="delete(data)" ng-show  = "data.name.length > 0">-</button>
+    <button class="btn btn-warning btn-xs" ng-click="delete(data)" ng-show  = "data.name.length > 0">x</button>
     <ul>
         <li ng-repeat="data in data.nodes" ng-include="'treemenu.html'"></li>
     </ul>
