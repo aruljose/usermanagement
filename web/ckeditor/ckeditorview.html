@@ -1,2 +1,8 @@
-
+<div>
+    <textarea style="visibility: hidden;" id="editor" name="editor" ng-model="editor">		
+    </textarea><br/>
+    <button id="btnSave" class="btn btn-success" ng-click="save()">Save</button>
+    <button class="btn btn-primary" ng-click="toggleckeditclose()" >Cancel</button>
+</div>
+<script>CKEDITOR.replace('editor');</script>
 
