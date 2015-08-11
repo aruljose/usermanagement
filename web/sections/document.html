@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>-->       
+        <script src="http://code.angularjs.org/1.2.5/angular.js"></script>
+        <script src="checklist.js"></script>
+
+        <script src = "../js/app.js"></script>
+        <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.js"></script>-->
+        
+        <!--<script src = "../ckeditor/ckeditor.js"></script>-->
+
+
+
+    </head>
+    <body>
+        <div ng-app>
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#checklist">Checklist</a></li>
+                <li><a data-toggle="tab" href="#guidelines">Guidelines</a></li>
+            </ul><br/>
+
+            <div class="tab-content">
+                <div id="checklist" class="tab-pane fade">
+                    <div class="container">
+                        <h2>CheckList</h2>
+                        <div ng-controller="ChecklistController">
+                            <div>
+                                <div ng-repeat="checklist in checklists">
+                                    <p ng-model="checklist.done"></p>
+                                    <span class="done-{{checklist.done}}">{{$index + 1}}.{{checklist.text}}</span>
+                                </div>
+                            </div>
+                            <form ng-submit="addChecklist()">
+                                <input type="text" ng-model="checklistText"  size="30"
+                                       placeholder="add new checklist here">
+                                <input class="btn-primary" type="submit" value="+">
+                            </form><br/>
+                            <button class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="guidelines" class="tab-pane fade">
+                    <h2>Guidelines</h2>
+                    <!--<p ng-include="'../ckeditor/ckeditorview.html'"></p>-->
+                    <div>
+                        <textarea style="visibility: hidden;" id="editor" name="editor" ng-model="editor">		
+                        </textarea>
+                        <button id="btnSave" ng-click="save()">Save</button>
+                        <button ng-click="toggleckeditclose()">Cancel</button>
+                        </span>
+                        <script>CKEDITOR.replace('editor');</script>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </body>
+</html>
