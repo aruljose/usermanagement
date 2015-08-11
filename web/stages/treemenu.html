@@ -1,0 +1,13 @@
+<div  id="treemenu.html">
+    {{data.name}}
+    <button class="btn btn-primary" ng-click="add(data)" >+</button>
+    <button class="btn btn-default" ng-click="delete(data)" ng-show="data.nodes.length > 0">-</button>
+    <ul>
+        <li ng-repeat="data in data.nodes" ng-include="'treemenu.html'"></li>
+    </ul>
+</div>
+
+<!--<script type="text/javascript-lazy">
+    console.log("It works!");
+<div>-->
+
