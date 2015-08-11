@@ -1,7 +1,10 @@
 <div  id="treemenu.html">
+    
     {{data.name}}
-    <button class="btn btn-primary" ng-click="add(data)" >+</button>
-    <button class="btn btn-default" ng-click="delete(data)" ng-show="data.nodes.length > 0">-</button>
+    <input class="form-group" ng-show ="data.name.length > 0"   type="text" ng-model="name">
+    
+    <button class=" btn btn-success btn-xs" ng-click="add(data)" >+</button>
+    <button class="btn btn-default btn-xs" ng-click="delete(data)" ng-show  = "data.name.length > 0">-</button>
     <ul>
         <li ng-repeat="data in data.nodes" ng-include="'treemenu.html'"></li>
     </ul>
