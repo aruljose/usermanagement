@@ -5,6 +5,7 @@
 <div class="container">
 <div ng-app="userManagementApp" ng-controller="TreeController">
     <div ng-repeat="data in tree" ng-include="'treemenu.html'"></div>
+    
     <!--<button type="button" ng-click="click()">click</button>-->
     
     <!--<div ng-show="showhide">
@@ -15,7 +16,13 @@
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+ <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+       
+               
+        <script src="http://code.angularjs.org/1.2.5/angular.js"></script>
+        <script src="../stages/checklist.html"></script>
+        <script src="../sections/checklist.js"></script>
+        <script src="../ckeditor/ckeditorview.html"></script>
 <script src="stagesController.js"></script>

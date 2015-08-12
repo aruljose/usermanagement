@@ -6,12 +6,12 @@ angular.module('userManagementApp', [])
           
       };*/
             
-            
+          //$scope.data.nodes = [];
             
             
       
       $scope.delete = function(data) {
-        data.nodes.length  = [];
+        data.nodes  = [];
     };
     $scope.add = function(data) {
         var post = data.nodes.length + 1;
@@ -19,10 +19,16 @@ angular.module('userManagementApp', [])
         data.nodes.push({name: newNode,nodes: []});
     };
     
-   /* $scope.toggle = function () {
-        alert("toggle");
-        $scope.showhide = true;
-    };*/
+    $scope.toggle = function() {
+       
+      // alert("test");
+        
+      $scope.showhide = true;
+       
+       
+            
+        
+    };
     
     $scope.tree = [{
          name: "", 
