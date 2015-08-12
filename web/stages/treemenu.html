@@ -1,15 +1,21 @@
-<div  id="treemenu.html">
+<div>
     
-    <span ng-hide="post">{{data.name}}</span>
+    <span>{{data.name}}</span>
     <input class="form-group" ng-show ="data.name"   type="text" ng-model="name">
     
     <button class=" btn btn-success btn-xs" ng-click="add(data)" >+</button>
-    <button class="btn btn-default btn-xs" ng-click="delete(data)">-</button>
-    <button class="btn btn-warning btn-xs"  ng-show  = "data.name.length > 0">x</button>
-    <ul>
-        <li ng-repeat="data in data.nodes" ng-include="'treemenu.html'"></li>
-    </ul>
+    <button  class="btn btn-default btn-xs" ng-click="delete(data)">-</button>
+    <button  class="btn btn-warning btn-xs" ng-click="toggle()" ng-show="data.name.length > 0 ">C&D</button><br><br>
+    
+    
+        <div ng-repeat="data in data.nodes" ng-include="'treemenu.html'"></div>
+        
+       
+        
+        
+    
 </div>
+ 
 
 <!--<script type="text/javascript-lazy">
     console.log("It works!");

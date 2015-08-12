@@ -10,7 +10,7 @@
                 <div>
                     <div ng-repeat="checklist in checklists">
                         <p ng-model="checklist.done"></p>
-                        <span class="done-{{checklist.done}}">{{$index + 1}}.{{checklist.text}}</span>
+                        <span>{{$index + 1}}.{{checklist.text}}</span>
                     </div>
                 </div>
                 <form ng-submit="addChecklist()">

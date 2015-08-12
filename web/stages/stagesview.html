@@ -1,14 +1,18 @@
 
+<title>Tree for Template Creation</title>
 
 
-
-
-<ul ng-app="userManagementApp" ng-controller="TreeController">
-    <li ng-repeat="data in tree" ng-include="'treemenu.html'"></li>
+<div class="container">
+<div ng-app="userManagementApp" ng-controller="TreeController">
+    <div ng-repeat="data in tree" ng-include="'treemenu.html'"></div>
     <!--<button type="button" ng-click="click()">click</button>-->
+    
+    <!--<div ng-show="showhide">
+            adscasdcadsc
+        </div>-->
 
-</ul>
-
+</div>
+</div>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
