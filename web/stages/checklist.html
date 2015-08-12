@@ -6,19 +6,19 @@
     </head>
     <body>
         <h2>Checklist</h2>
+        <div>
             <div>
-                <div>
-                    <div ng-repeat="checklist in checklists">
-                        <p ng-model="checklist.done"></p>
-                        <span>{{$index + 1}}.{{checklist.text}}</span>
-                    </div>
+                <div ng-repeat="checklist in checklists">
+                    <p ng-model="checklist.done"></p>
+                    <span>{{$index + 1}}.{{checklist.text}}</span>
                 </div>
-                <form ng-submit="addChecklist()">
-                    <input type="text" ng-model="checklistText"  size="30"
-                           placeholder="add new checklist here">
-                    <input class="btn-primary" type="submit" value="+">
-                </form><br/>
-                <button class="btn btn-success">Save</button>
             </div>
+            <form ng-submit="addChecklist()">
+                <input type="text" ng-model="checklistText"  size="30"
+                       placeholder="add new checklist here">
+                <input class="btn-primary" type="submit" value="+">
+            </form><br/>
+            <button class="btn btn-success">Save</button>
+        </div>
     </body>
 </html>
