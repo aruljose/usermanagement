@@ -5,18 +5,28 @@ angular.module('userManagementApp', [])
           alert("click");
           
       };*/
+            
+            
+            
+            
       
       $scope.delete = function(data) {
-        data.nodes = [];
+        data.nodes.length  = [];
     };
     $scope.add = function(data) {
         var post = data.nodes.length + 1;
-        var newNode = data.name + '-'  + post;
+        var newNode = data.name + post + '.';
         data.nodes.push({name: newNode,nodes: []});
     };
     
-    $scope.tree = [
-        {name: "", 
-         nodes: []}];
+   /* $scope.toggle = function () {
+        alert("toggle");
+        $scope.showhide = true;
+    };*/
+    
+    $scope.tree = [{
+         name: "", 
+         nodes: []
+     }];
     
     }]);
