@@ -1,3 +1,4 @@
+var app = angular.module('userManagementApp',[]);
 app.controller("editorController", function ($scope) {
     var editorList = this;
     $scope.ckeditordata = [];
