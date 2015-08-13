@@ -29,7 +29,9 @@
                 <form ng-submit="addChecklist()">
                     <input type="text" ng-model="checklistText"  size="30"
                            placeholder="add new checklist here">
-                    <input class="btn btn-primary" type="submit" value="+"><input class="btn btn-primary" type="submit" ng-click="delete()" value="X">
+                    <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-primary" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
+                   
                 </form><br/>
                   
                 <button class="btn btn-success">Save</button>
