@@ -1,4 +1,3 @@
-
 app.controller("ckEditor", function ($scope) {
     $scope.ckeditordata = [];
     $scope.save = function () {
