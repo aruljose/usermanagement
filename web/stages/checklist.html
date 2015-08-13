@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h2>Checklist</h2>
+        <h4>Checklist</h4>
         <div>
             <div>
                 <div ng-repeat="checklist in checklists">
@@ -14,9 +14,9 @@
                 </div>
             </div>
             <form ng-submit="addChecklist()">
-                <input type="text" ng-model="checklistText"  size="30"
-                       placeholder="add new checklist here">
-                <input class="btn-primary" type="submit" value="+">
+                <input type="text" ng-model="checklistText"
+                       class="form-control" placeholder="add new checklist here">
+                <button><i class="fa-user"></i></button>
             </form><br/>
             <button class="btn btn-success">Save</button>
         </div>

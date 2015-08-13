@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Aug 13, 2015, 1:56:39 PM
+    Author     : arun
+*/
+
+.ckedit{
+    text-align: center;
+    float:left;
+}
+.checklist{
+    text-align: center;
+    float:right;  
+}
+.showchecklistguidelines{
+    height:70%;
+    width:100%;
+    border:1px solid grey;
+    padding-left: 5%;
+    padding-top: 2%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+}
