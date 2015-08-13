@@ -1,44 +1,29 @@
 var app = angular.module('ckEditorapp', ['ui.bootstrap']);
 app.controller('ckeditorController',['$scope', '$modal','$log','$rootScope',
  function controller($scope, $modal, $log, $rootScope)
- {
+ {     
+     $scope.ckeditorhide = false;
+     
      $rootScope.setData = function(editor)
      {
          $scope.editor = $rootScope.editor;
      };
 
 $scope.save = function (editor){
-alert("1");
-
 $scope.toggle =false;
-
+     $scope.ckeditorhide = true;
 };
 
 $scope.cancel = function (editor){
-alert("1");
 
 $scope.toggle =false;
 
 };
 
- $scope.open = function (editor,size) {
+ $scope.open = function (editor) {
 
 $scope.toggle =true;
- $scope.val = "";
-
- var modalInstance = $modal.open({
-
- templateUrl: 'myModalContent',
- controller: ModalInstanceCtrl,
- size: size, 
-
- });
-
- modalInstance.result.then(function (selectedItem) {
- $scope.selected = selectedItem;
- }, function () {
- $log.info('Modal dismissed at: ' + new Date());
- });
+ $scope.val = ""; 
  };
  }]);
 
