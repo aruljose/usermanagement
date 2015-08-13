@@ -8,14 +8,12 @@ app.controller('ckeditorController', ['$scope', '$modal', '$log', '$rootScope',
         };
 
         $scope.save = function (editor) {
-            alert("1");
 
             $scope.toggle = false;
 
         };
 
         $scope.cancel = function (editor) {
-            alert("1");
 
             $scope.toggle = false;
 
