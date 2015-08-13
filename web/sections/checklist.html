@@ -5,20 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h2>Checklist</h2>
+        <h4>Checklist</h4>
             <div ng-controller="ChecklistController">
                 <div>
-                    <div ng-repeat="checklist in checklists">
-                        <p ng-model="checklist.done"></p>
-                        <span>{{$index + 1}}.{{checklist.text}}</span>
-                    </div>
+                   <table class="table table-bordered">                
+                        <thead>                   
+                            <tr>   
+                                <th>Sl.No</th>                     
+                                <th>Name</th>      
+                                <th>Checkbox</th>  
+                            </tr>          
+                        </thead>
+                                     
+                        <tbody>                    
+                            <tr ng-repeat="checklist in checklists" class="sm"> 
+                                <td>{{$index + 1}}</td>                       
+                                <td>{{checklist.text| uppercase}}</td>
+                                <td><input type="checkbox" ng-model="checklist.done" /></td>
+                            </tr>        
+                        </tbody>   
+                    </table>       
                 </div>
                 <form ng-submit="addChecklist()">
                     <input type="text" ng-model="checklistText"  size="30"
                            placeholder="add new checklist here">
-                    <input class="btn-primary" type="submit" value="+">
+                    <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
+                    <button class="btn btn-primary" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
+                   
                 </form><br/>
+                  
                 <button class="btn btn-success">Save</button>
+                <button class="btn btn-primary">Cancel</button>
             </div>
     </body>
 </html>
+
