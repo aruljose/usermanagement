@@ -15,14 +15,17 @@ and open the template in the editor.
 .checklist{
     text-align: center;
     float:right;  
+    overflow: scroll;
+    height:100%;
+    width:40%;
     
 }
 .showchecklistguidelines{
     height:70%;
     width:100%;
     border:1px solid grey;
-    padding-left: 5%;
+    padding-left: 2%;
     padding-top: 2%;
-    padding-right: 5%;
-    padding-bottom: 5%;
+    padding-right: 2%;
+    padding-bottom: 2%;
 }
