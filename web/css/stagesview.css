@@ -18,22 +18,34 @@ and open the template in the editor.
     overflow: scroll;
     height:60%;
     width:40%;
-    
+
 }
 .modal-header{
-     border: 1px solid grey;
+    border: 1px solid grey;
 }
 .modal-content{
-     border: 1px solid grey;
-     padding-left: 4%;
+    border: 1px solid grey;
+    padding-left: 4%;
     padding-top: 2%;
     padding-right: 4%;
     padding-bottom: 2%;
 }
 .modal-footer{
-     border: 1px solid grey;
+    border: 1px solid grey;
+}
+.modal-title{
+    text-align: center;
+}
+.close{
+    float: left;
+}
+.maximize{
+    float: left;
+}
+.minimize{
+    float: left;
 }
 
 .navbar-inverse{
-    background-color: lightgreen;
+    background-color: lightgray;
 }
