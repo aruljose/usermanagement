@@ -6,37 +6,39 @@
     </head>
     <body>
         <h4>Checklist</h4>
-            <div ng-controller="ChecklistController">
-                <div>
-                   <table class="table table-bordered">                
-                        <thead>                   
-                            <tr>   
-                                <th>Sl.No</th>                     
-                                <th>Name</th>      
-                                <th>Checkbox</th>  
-                            </tr>          
-                        </thead>
-                                     
-                        <tbody>                    
-                            <tr ng-repeat="checklist in checklists" class="sm"> 
-                                <td>{{$index + 1}}</td>                       
-                                <td>{{checklist.text| uppercase}}</td>
-                                <td><input type="checkbox" ng-model="checklist.done" /></td>
-                            </tr>        
-                        </tbody>   
-                    </table><br/>   
-                </div>
-                <form ng-submit="addChecklist()">
-                    <input type="text" ng-model="checklistText"
-                           placeholder="add new checklist here">
-                    <button class="btn btn-primary"><i class="fa fa-plus"></i></button>
-                    <button class="btn btn-default" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
-                </form>
-                   <br/>
-                  
-                <button class="btn btn-success">Save</button>
-                <button class="btn btn-primary">Cancel</button>
+        <div ng-controller="ChecklistController">
+            <div>
+                <table class="table table-bordered">                
+                    <thead>                   
+                        <tr>   
+                            <th>Sl.No</th>                     
+                            <th>Name</th>      
+                            <th>Checkbox</th>  
+                        </tr>          
+                    </thead>
+
+                    <tbody>                    
+                        <tr ng-repeat="checklist in checklists" class="sm"> 
+                            <td>{{$index + 1}}</td>                       
+                            <td>{{checklist.text| uppercase}}</td>
+                            <td><input type="checkbox" ng-model="checklist.done" /></td>
+                        </tr>        
+                    </tbody>   
+                </table><br/>   
             </div>
+            <form ng-submit="addChecklist()">
+                <label> <input class="form-control" type="text" ng-model="checklistText"
+                               placeholder="add new checklist here">
+                </label>
+                <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+                <button class="btn btn-default" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
+            </form>
+            <br/>
+            <div>
+                <button class="btn btn-info">Save</button>
+                <button class="btn btn-default">Cancel</button>
+            </div>
+        </div>
     </body>
 </html>
 
