@@ -26,13 +26,13 @@
                     </tbody>   
                 </table><br/>   
             </div>
-            <form ng-submit="addChecklist()">
+           <label><form ng-submit="addChecklist()">
                 <label> <input class="form-control" type="text" ng-model="checklistText"
                                placeholder="add new checklist here">
                 </label>
                 <button class="btn btn-success"><i class="fa fa-plus"></i></button>
-                <button class="btn btn-default" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
-            </form>
+                
+                </form></label>&nbsp;<button class="btn btn-default" ng-click="delete()"><i class="fa fa-trash-o"></i></button>
             <br/>
             <div>
                 <button class="btn btn-info">Save</button>
