@@ -1,11 +1,11 @@
-<h4>Guidelines</h4>
-<div>
-    <textarea style="visibility: hidden;" id="editor" name="editor" ng-model="editor">		
-    </textarea><br/>
-    <button id="btnSave" class="btn btn-success" ng-click="save()">Save</button>
-    <button class="btn btn-primary" ng-click="toggleckeditclose()" >Cancel</button>
+<div data-ng-app="userManagementApp" ng-controller="editorController">
+    <textarea data-ng-model="ckeditortest" id="editor"></textarea>
+    <br />
+    <button class="btn btn-info" ng-click="save(ckeditortest)">Save</button>
+    <button class="btn btn-default" ng-click="cancel(ckeditortest)">Cancel</button> 
 </div>
-{{ckeditordata}}
+<div type="text" ng-show = "ckeditorhide" ng-bind-html-unsafe="ckeditortest"></div>
 <script>CKEDITOR.replace('editor');</script>
-
-
+<div>
+    {{ckeditordata}}
+</div>
