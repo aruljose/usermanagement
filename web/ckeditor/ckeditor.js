@@ -1,6 +1,6 @@
 
 
-app.controller("ckEditor", function($scope) {
+app.controller("editorController", function($scope) {
 
 $scope.ckeditorHide = true;
         $scope.toggleckeditopen = function() {
