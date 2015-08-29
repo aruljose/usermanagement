@@ -22,16 +22,13 @@ and open the template in the editor.
 }
 .modal-header{
     border: 1px solid grey;
+    margin-left: 1%;
+    
 }
-.modal-content{
-    border: 1px solid grey;
-    padding-left: 4%;
-    padding-top: 2%;
-    padding-right: 4%;
-    padding-bottom: 2%;
-}
+
 .modal-footer{
     border: 1px solid grey;
+    margin-left: 1%;
 }
 .modal-title{
     text-align: center;
@@ -48,4 +45,5 @@ and open the template in the editor.
 
 .navbar-inverse{
     background-color: lightgray;
+    height: 2%;
 }
