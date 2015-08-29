@@ -1,19 +1,22 @@
 
     app.config(function($routeProvider) {
         $routeProvider
-            .when('/', {
-                templateUrl : '../user/userview.html',
-                controller  : 'UserController'
+        .when('/', {
+                templateUrl : 'templatefrontpage.html'
+                
             })
-            .when('/enterprise', {
-                templateUrl : '../enterprise/enterpriseview.html',
-                controller  : 'EnterpriseController'
-            })      
             
-            .when('/admin', {
-                templateUrl : '../admin/adminview.html',
-                controller  : 'AdminController'
+            
+            .when('/product', {
+                templateUrl : 'stagesview.html',
+                controller  : 'TreeController'
             })
+            
+            .when('/sharing', {
+                templateUrl : 'sharing.html'
+                
+            })
+   
             
 	    .otherwise({
             redirectTo: '/'

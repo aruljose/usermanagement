@@ -11,24 +11,23 @@
 
         <form ng-contoller="LoginController" class="form-inline" name="userForm" ng-submit="submitForm()" novalidate>
 
-            <div class="well">
-                <img src="images/login.png"><br/>
+            <div class="well" id = "loginbox">
+                <img src="images/loginimage.jpeg" height="150px"><br/><br/>
 
                 <div ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
-                    <label for="email">Username :</label>   
-                    <input type="email" class="form-control" placeholder="Enter Email" ng-model="email"/>
+                   <!-- <label for="email">Username :</label> -->  
+                    <input type="email" class="form-control" placeholder="User Name" ng-model="email"/>
                 </div><br/>
 
                 <div ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
-                    <label for="password">Password :</label>  
-                    <input type="password" class="form-control" placeholder="Enter Password" ng-model="password" ng-minlength="6" ng-maxlength="10"/>
+                   <!-- <label for="password">Password :</label>  -->
+                    <input type="password" class="form-control" placeholder="Password" ng-model="password" ng-minlength="6" ng-maxlength="10"/>
                 </div><br/>
 
-                <input type="radio" name="name" value="user" checked/> User
-                <input type="radio" name="name" value="enterprise"/> Enterprise
-                <input type="radio" name="name" value="admin"/> Admin <br></br>
 
-                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid" ng-click="redirectSideMenu()">Submit</button>
+                <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid" ng-click="redirectSideMenu()">Admin</button>
+                <button type="submit" class="btn btn-info" ng-disabled="userForm.$invalid" ng-click="redirectSideMenu()">Enterprise</button>
+                <button type="submit" class="btn btn-warning" ng-disabled="userForm.$invalid" ng-click="redirectSideTreeMenu()">User</button><br><br>
                 <button type="reset" class="btn btn-success">Reset</button>
 
             </div>

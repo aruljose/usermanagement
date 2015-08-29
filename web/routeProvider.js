@@ -1,7 +1,7 @@
 
 app.config(function ($routeProvider) {
     $routeProvider
-            .when("/login",
+            .when("/",
                     {
                         templateUrl: 'login/loginview.html',
                         controller: 'LoginController'

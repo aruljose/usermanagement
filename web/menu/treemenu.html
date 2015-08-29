@@ -1,0 +1,25 @@
+<br><div>
+    <span>{{data.name}}</span>
+
+    
+        <label>
+            <input  class="form-control"   type="text" ng-show ="data.name"
+                   style="height: 34px; width: 500px">
+        </label>
+    
+
+    <!--<input class="form-inline" ng-show ="data.name"   type="text" ng-model="name">-->
+    <button class=" btn btn-success" ng-click="add(data)" style = "height: 34px"><i class="fa fa-plus"></i></button>
+    <button  class="btn btn-default" ng-click="delete(data)" style = "height: 34px"><i class="fa fa-trash-o"></i></button>
+    <button  class="btn btn-info" ng-click="toggle()"   ng-show ="data.name.length">
+        Guidelines & Checklist</button>
+    
+
+    <div ng-repeat="data in data.nodes" ng-include="'treemenu.html'">       
+    </div>
+   
+
+
+</div>
+
+

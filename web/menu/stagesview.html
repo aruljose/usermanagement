@@ -3,30 +3,20 @@
 
 <div class="container">
     <div>
-        <div ng-repeat="data in tree" ng-include="'treemenu.html'"></div>
-       <div ng-show="showhide">
-
-            <div class="modal-header"> 
-                <!--<button type="button" class="max" data-dismiss="modal">&plus</button>
-                <button type="button" class="min" data-dismiss="modal">&minus;</button>-->
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Guidelines and Checklists</h4>          
-            </div>
+        <div ng-repeat="data in tree" ng-include="'treemenu.html'">
             
-            <div class="modal-footer">
-                <div class="ckedit"> <nav class="navbar navbar-inverse"></nav>
-                    <div ng-include="'../ckeditor/ckeditorview.html'"></div>
-                </div>
-
-                <div class="checklist well">
-                    <div ng-include="'../sections/checklist.html'"></div>
-                </div>
+</div>
+       <div ng-show="showhide">          
+                
+           <div ng-include="'../sections/document.html'"></div>
+           
+                
             </div>
 
 
         </div>
     </div>
-</div>
+
 
 
 <!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">

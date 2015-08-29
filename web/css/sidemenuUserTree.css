@@ -1,0 +1,34 @@
+/* 1st level */
+.nav label {
+	color: #999999;
+}
+
+/* 2nd level */
+.tree > li > label {
+  padding:10px 15px;  
+}
+
+/* 3rd level */
+.tree > li > ul > li > a {
+  color:black;
+  font-size:10pt;
+  margin-left:15px;
+}
+#sidebar-wrapper .well { 
+   
+    background-color: #222;
+    
+}
+#sidebar-wrapper .tree a {
+    color: #999999;
+    text-decoration: none;
+}
+
+.header {
+    border-bottom: 1px solid #151515;
+    //text-indent: 20px;
+    //line-height: 20px;
+}
+.tree-toggle {
+    margin-left: 6px;
+}
