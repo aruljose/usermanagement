@@ -4,7 +4,7 @@
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Edit</th>
+                        
                         <th>FirstName</th>
                         <th>LastName</th>
                         <th>Password</th>
@@ -12,18 +12,19 @@
                         <th>Enterprise</th>
                     </tr>
                 </thead>
-                <tbody>
+               <tbody>
                     <tr ng-repeat="user in users">
 
-                        <td><button type="button" class="btn btn-default">Edit</button></td>
+                        
                         <td>{{user.firstname}}</td>
                         <td>{{user.lastname}}</td>
                         <td>{{user.password}}</td>
                         <td>{{user.email}}</td>
                         <td>{{user.enterprise}}</td>
+                        <td><button type="button" class="btn btn-default">Edit</button></td>
                     </tr>                    
                 </tbody>
-            </table>
+            </table><br>
 
             <div>
                 <button type="button" class="btn btn-primary" ng-click="showUserForm()">Create User</button>
