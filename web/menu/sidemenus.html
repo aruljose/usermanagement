@@ -2,9 +2,7 @@
 <html lang="en">
     <head>
         <title>SideMenu</title>
-        <link rel="stylesheet" href="../stages/stages.css">
         <link href="sidemenu.css" rel="stylesheet">
-        
         <link rel="stylesheet" href="../css/stagesview.css">
         <link rel="stylesheet" href="../css/document.css">
 
@@ -16,11 +14,24 @@
         <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>  
         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>pt>
     </head>
     <body ng-app = "userManagementApp">
         <div id="wrapper">
-            <div class = "navbar navbar-inverse header">
+            <div class = "navbar navbar-inverse navbar-fixed-top">
+
+ 				<label class="pull-left"><a href="#menu-toggle" id="menu-toggle">
+                    			<img class = "imgtag" src="toggles.png"/>
+					<!--<span class = "glyphicon glyphicon-menu-hamburger fa-2x"></span>-->				
+               			</a>
+                		<img src="logo.png"/>
+				</label>
+
+                		<div class="pull-right"><label><h5>Admin</h5></label> 
+                    			<img src="user-icon.png" class = "img-circle"/>
+                		</div>
+
+	    </div>
                 <div id="sidebar-wrapper">
                     <ul class="sidebar-nav">
                         <li class="sidebar-brand">
@@ -41,26 +52,17 @@
                         <li>
                             <a href="#sharing">Sharing & Privacy</a>
                         </li>
+
                     </ul>
                 </div>
-                <a href="#menu-toggle" id="menu-toggle">
-                    <img src="toggles.png" class="pull-left" height = "40px"/>
-                </a>
-                <img src="logo.png" class="pull-left" height = "40px"/>
-
-                <div class="pull-right"><label><h5>Admin</h5></label>&nbsp;
-                    <img src="user-icon.png" height="35px"/> 
-                </div>
-
+               <ng-view></ng-view>
             </div>
-            <ng-view></ng-view>
+            
+        
+        <div class = "navbar-fixed-bottom">           
+                <p class = "text-center">Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>           
         </div>
-        <div class = "navbar-fixed-bottom navbar-inverse header">
-            <div class = "footer">
-                <p>Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>
-            </div>
-        </div>
-        <script src = "../js/app.js"></script>
+                <script src = "../js/app.js"></script>
         <script src = "../user/usercontroller.js"></script>
         <script src = "../enterprise/enterprisecontroller.js"></script>
         <script src = "../admin/admincontroller.js"></script>
