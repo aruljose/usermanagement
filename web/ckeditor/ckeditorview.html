@@ -1,11 +1,16 @@
 <div ng-controller = "editorController">
     <!--<button ng-click="toggleckeditopen()">Click Open Ckeditor</button>-->
     <span ng-hide="ckeditorHide">
-        <textarea data-ng-model="editor.value" data-ck-editor id="ckeditor"></textarea>
-        <button id="btnSave" ng-click="save()">Save</button>
-        <button ng-click="toggleckeditclose()">Cancel</button>	</span>
+        <textarea data-ng-model="editor.value" data-ck-editor id="ckeditor"></textarea><br>
+        <label>
+        <button class="btn btn-info" id="btnSave" ng-click="save()">Save</button>
+        <button class="btn btn-warning" ng-click="toggleckeditclose()">Cancel</button>
+    </span>
     <span ng-show="ckeditorHide"></span>
+    
+    <div ng-repeat="ckEditor in ckEditors">
+    {{ckEditor.editorvalue | htmlToPlaintext}}
+    <button type="button" class="btn btn-success" ng-click="toggleckeditopen()">Edit</button>
+</div>	 
 </div>
-<div>
-    {{ckeditordata| htmlToPlaintext}}
-</div>	
+
