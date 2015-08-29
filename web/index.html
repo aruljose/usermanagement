@@ -3,9 +3,6 @@
     <head>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="css/index.css">
-                <link rel="stylesheet" href="css/login.css">
-
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>                
@@ -20,19 +17,19 @@
     <body ng-app="userManagementApp">
         <nav class="navbar navbar-inverse">
             <img src="images/netphenix.png">
-            <div class="header">
-                <!--<a class="navbar-brand" href="#">Login</a>-->
-                <a class="navbar-brand" href="#register">Register</a>
+            <div class="header pull-right">
+                <a class="navbar-brand" href="#login"><span class="glyphicon glyphicon-log-in">Login</span></a>
+                <a class="navbar-brand" href="#register"><span class="glyphicon glyphicon-user">Register</span></a>
             </div>
-        </nav>
+        </nav><br/>
 
         <div class="login">
             <div ng-view=""></div>
-        </div><br><br/><br/>
+        </div>
 
         <nav class="navbar-fixed-bottom navbar-inverse">
-            <div class="footer">
-                <p>© 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>
+            <div class="footer text-center">
+                <p style="color:white;">© 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>
             </div>
         </nav>
     </body>
