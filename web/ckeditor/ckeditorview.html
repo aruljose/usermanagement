@@ -1,11 +1,12 @@
 <div ng-controller="editorController">
-    <textarea data-ng-model="ckeditortest" id="editor"></textarea>
+    <div ng-repeat="editor in ckEditors">
+    <textarea data-ng-model="editor.value" data-ck-editor></textarea>
     <br />
+    </div>
     <button class="btn btn-info" ng-click="save(ckeditortest)">Save</button>
     <button class="btn btn-default" ng-click="cancel(ckeditortest)">Cancel</button> 
 </div>
-<div type="text" ng-show = "ckeditorhide" ng-bind-html-unsafe="ckeditortest"></div>
-<script>CKEDITOR.replace('editor');</script>
+
 <div>
     {{ckeditordata}}
 </div>
