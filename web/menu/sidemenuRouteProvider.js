@@ -6,16 +6,23 @@
                 
             })
             
-            
-            .when('/product', {
-                templateUrl : 'stagesview.html',
-                controller  : 'TreeController'
-            })
-            
-            .when('/sharing', {
-                templateUrl : 'sharing.html'
+            .when('/template', {
+                templateUrl : 'templatefrontpage.html'
                 
             })
+            
+            .when('/user', {
+                templateUrl : '../user/userview.html',
+                controller  : 'UserController'
+            })
+            
+            
+            .when('/enterprise', {
+                templateUrl : '../enterprise/enterpriseview.html',
+                controller  : 'EnterpriseController'
+            })
+            
+            
    
             
 	    .otherwise({

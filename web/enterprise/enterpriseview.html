@@ -5,7 +5,6 @@
                 <table class="table table-striped">
                     <thead>
                         <tr>
-                            <th>Edit</th>
                             <th>Name</th>
                             <th>Contact</th>
                             <th>Address</th>
@@ -14,14 +13,15 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat = "enterprise in enterprises">
-                            <td><button type="button" class="btn btn-default">Edit</button></td>
+                            
                             <td>{{enterprise.name}}</td>
                             <td>{{enterprise.contact}}</td>
                             <td>{{enterprise.address}}</td>
                             <td>{{enterprise.email}}</td>
+                            <td><button type="button" class="btn btn-default">Edit</button></td>
                         </tr>                    
                     </tbody>
-                </table>
+                </table><br>
                 <button type="button" class="btn btn-primary" ng-click="showForm()">Create Enterprise</button>          
                 <div ng-show="enterprisepopup" class="">
                     
