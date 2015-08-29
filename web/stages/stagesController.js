@@ -18,12 +18,6 @@
                     };
                
 
-               /* $scope.toggle = function () {
-                     $scope.showhide = !$scope.showhide;
-
-                   
-                };*/
-
                 $scope.tree = [{
                         name: "",
                         nodes: []

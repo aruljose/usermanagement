@@ -1,34 +1,30 @@
 
 
-app.controller("editorController", function($scope) {
+app.directive('ckEditor', [function () {
+    return {
+        require: '?ngModel',
+        link: function ($scope, elm, attr, ngModel) {
 
-$scope.ckeditorHide = true;
-        $scope.toggleckeditopen = function() {
-            $scope.ckeditorHide = $scope.ckeditorHide = false;
-        };
-        
-	$scope.toggleckeditclose = function() {
-            $scope.ckeditorHide = $scope.ckeditorHide =true;
-        };
+            var ck = CKEDITOR.replace(elm[0]);
 
-$scope.ckeditordata = [];
+            ck.on('pasteState', function () {
+                $scope.$apply(function () {
+                    ngModel.$setViewValue(ck.getData());
+                });
+            });
 
-$scope.save = function () {
-$scope.ckeditordata = CKEDITOR.instances.editor.getData();
-
-$scope.ckeditorHide = $scope.ckeditorHide =true;
-
-console.log( CKEDITOR.instances.editor.getData());
-}
-
-})
-
-
-
- app.filter('htmlToPlaintext', function() {
-    return function(editor) {
-      return  editor ? String(editor).replace(/<[^>]+>/gm, '') : '';
+            ngModel.$render = function (value) {
+                ck.setData(ngModel.$modelValue);
+            };
+        }
     };
-  }
-);
+}])
+
+function editorController($scope){
+    $scope.ckEditors = [];
+   
+        var rand = "";
+        $scope.ckEditors.push({value:rand});
+    
+}
 
