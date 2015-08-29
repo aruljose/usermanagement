@@ -20,30 +20,3 @@ and open the template in the editor.
     width:40%;
 
 }
-.modal-header{
-    border: 1px solid grey;
-    margin-left: 1%;
-    
-}
-
-.modal-footer{
-    border: 1px solid grey;
-    margin-left: 1%;
-}
-.modal-title{
-    text-align: center;
-}
-.close{
-    float: left;
-}
-.maximize{
-    float: left;
-}
-.minimize{
-    float: left;
-}
-
-.navbar-inverse{
-    background-color: lightgray;
-    height: 2%;
-}
