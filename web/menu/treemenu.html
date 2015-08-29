@@ -2,17 +2,39 @@
     <span>{{data.name}}</span>
 
     
-        <label>
-            <input  class="form-control"   type="text" ng-show ="data.name"
-                   style="height: 34px; width: 500px">
-        </label>
+       <label>
+            <input  class="form-control"   type="text" ng-show ="data.name">
+        </label>&nbsp;&nbsp;&nbsp;
     
 
     <!--<input class="form-inline" ng-show ="data.name"   type="text" ng-model="name">-->
-    <button class=" btn btn-success" ng-click="add(data)" style = "height: 34px"><i class="fa fa-plus"></i></button>
-    <button  class="btn btn-default" ng-click="delete(data)" style = "height: 34px"><i class="fa fa-trash-o"></i></button>
-    <button  class="btn btn-info" ng-click="toggle()"   ng-show ="data.name.length">
-        Guidelines & Checklist</button>
+    <button id="add" class=" btn btn-success" ng-click="add(data)"><i class="fa fa-plus"></i></button>
+    <button id="delete"  class="btn btn-default" ng-click="delete(data)"><i class="fa fa-trash-o"></i></button>
+    <button  class="btn btn-info " ng-click="toggleGuidelineCkeditor = !toggleGuidelineCkeditor"
+             ng-show="data.name.length > 0">Guidelines & Checklist</button>
+    <!--<button type="button" ng-click="hiddenDiv = !hiddenDiv" class="review">{{lists[$index]}}click</button>-->
+    
+     <div ng-show="toggleGuidelineCkeditor">
+
+            <div class="modal-header"> 
+                <!--<button type="button" class="max" data-dismiss="modal">&plus</button>
+                <button type="button" class="min" data-dismiss="modal">&minus;</button>-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Guidelines and Checklists</h4>          
+            </div>
+            
+            <div class="modal-footer">
+                <div class="ckedit"> <nav class="navbar navbar-inverse"></nav>
+                    <div ng-include="'../ckeditor/ckeditorview.html'"></div>
+                </div>
+
+                <div class="checklist well">
+                    <div ng-include="'../sections/checklist.html'"></div>
+                </div>
+            </div>
+
+
+        </div>
     
 
     <div ng-repeat="data in data.nodes" ng-include="'treemenu.html'">       
