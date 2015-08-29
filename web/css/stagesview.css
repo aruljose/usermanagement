@@ -9,11 +9,9 @@ and open the template in the editor.
 */
 
 .ckedit{
-    text-align: left;
     float:left;
 }
 .checklist{
-    text-align: left;
     float:right;  
     //overflow: scroll;
     height:60%;
