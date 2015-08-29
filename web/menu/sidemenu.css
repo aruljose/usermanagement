@@ -10,6 +10,7 @@
 }
 #sidebar-wrapper {
     z-index: 1000;
+    top: 30px;
     position: fixed;
     left: 250px;
     width: 0;
@@ -33,7 +34,7 @@
 }
 .sidebar-nav {
     position: absolute;
-    top: 0;
+    top: 20px;
     width: 250px;
     margin: 0;
     padding: 0;
@@ -58,12 +59,11 @@
     
 }
 .sidebar-nav > .sidebar-brand {
-    top: 50px;
     height: 40px;
     font-size: 18px;
     line-height: 60px;
 }
-@media(min-width:768px) {
+@media(min-width: 992px) {
     #wrapper {
         padding-left: 180px;
     }
@@ -84,34 +84,41 @@
         position: relative;
         margin-right: 0;
     }
-}
-.footer {
-      position:fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height:20px;
-      background-color: #222;
+    #wrapper.container{
+        width : 920px;
     }
-.footer p {
-text-align: center;
-color: #fff; 
+   
 }
 .pull-right
 {
     color: #fff;
     margin-right: 20px;
-    margin-top: 5px;
+    margin-top: 7px;
 }
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 4%;
-    overflow-y: scroll;
+.text-center{
+color  : #f7f7f7;
 }
-.navbar-fixed-top {
-    border-radius: 0;
-   border-width: 0px 0px 0px;
+.glyphicon{
+color : #f7f7f7;
+}
+.navbar.navbar-fixed-top {
+    border-width: 0px 0px 0px;
+}
+.navbar-fixed-bottom{
+background-color:#222;
+background-repeat: repeat-x;
+ border-width: 0px 0px 0px;
+}
+.imgtag{
+margin-left : 10px;
+height : 25px;
+}
+.img-circle {
+height : 35px;
+}
+.ngview {
+    margin-left: 15%;
+    margin-right: 5%;
+    margin-top: 5%;
+    width: 970px;
 }
