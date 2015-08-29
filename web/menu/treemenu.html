@@ -14,24 +14,10 @@
              ng-show="data.name.length > 0">Guidelines & Checklist</button>
     <!--<button type="button" ng-click="hiddenDiv = !hiddenDiv" class="review">{{lists[$index]}}click</button>-->
     
-     <div ng-show="toggleGuidelineCkeditor">
-
-            <div class="modal-header"> 
-                <!--<button type="button" class="max" data-dismiss="modal">&plus</button>
-                <button type="button" class="min" data-dismiss="modal">&minus;</button>-->
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Guidelines and Checklists</h4>          
-            </div>
-            
-            <div class="modal-footer">
-                <div class="ckedit"> <nav class="navbar navbar-inverse"></nav>
-                    <div ng-include="'../ckeditor/ckeditorview.html'"></div>
-                </div>
-
-                <div class="checklist well">
-                    <div ng-include="'../sections/checklist.html'"></div>
-                </div>
-            </div>
+     <div ng-show="toggleGuidelineCkeditor">       
+         <div ng-include="'../sections/document.html'">
+             
+         </div>
 
 
         </div>
