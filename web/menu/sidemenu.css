@@ -16,7 +16,7 @@
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
-color:white;
+    color:white;
     background: #222;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -95,4 +95,10 @@ color:white;
 .footer p {
 text-align: center;
 color: #fff; 
+}
+.pull-right
+{
+    color: #fff;
+    margin-right: 20px;
+    margin-top: 5px;
 }

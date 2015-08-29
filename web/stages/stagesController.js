@@ -1,5 +1,5 @@
-angular.module('userManagementApp', [])
-        .controller('TreeController', ['$scope', function ($scope) {
+//angular.module('userManagementApp', [])
+        app.controller('TreeController', ['$scope', function ($scope) {
                 
              //  var newNode = [];
               //  var currentCache = [];   

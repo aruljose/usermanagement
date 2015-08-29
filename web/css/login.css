@@ -9,9 +9,12 @@ and open the template in the editor.
 */
 
 .form-inline{
-    float:right;
+    //float:right;
 }
 .well{
-    margin-left: 10%;
+    margin-left: 30%;
+}
+#loginbox{
+   width: 40%;
 }
 

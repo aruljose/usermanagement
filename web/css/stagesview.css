@@ -13,9 +13,9 @@ and open the template in the editor.
     float:left;
 }
 .checklist{
-    text-align: center;
+    text-align: left;
     float:right;  
-    overflow: scroll;
+    //overflow: scroll;
     height:60%;
     width:40%;
 
