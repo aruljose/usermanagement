@@ -33,15 +33,19 @@ $scope.ckeditorHide = false;
 
     $scope.ckEditors = [];
    
-        var rand = "";
-        $scope.ckEditors.push({value:rand});
+       // var randsss = "";
+       // $scope.ckEditors.push({value:randsss});
     
 $scope.save = function () {
-$scope.ckeditordata = CKEDITOR.instances.ckeditor.getData();
+    
+    $scope.ckEditors.push({
+        editorvalue : $scope.editor.value
+    })
+//$scope.ckeditordata = CKEDITOR.instances.ckeditor.getData();
 
 $scope.ckeditorHide = $scope.ckeditorHide =true;
 
-console.log( CKEDITOR.instances.ckeditor.getData());
+//console.log( CKEDITOR.instances.ckeditor.getData());
 }
 }
 

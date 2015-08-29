@@ -12,6 +12,8 @@
                 $scope.add = function (data) {
                     
                     
+                    
+                    
                     var post = data.nodes.length + 1  ;
                     var newNode = data.name + post + '.' ;
                     data.nodes.push({name: newNode, nodes: []});
