@@ -1,8 +1,10 @@
 //angular.module('userManagementApp', [])
         app.controller('TreeController', ['$scope', function ($scope) {
                 
-             //  var newNode = [];
-              //  var currentCache = [];   
+             $scope.toggleGuidelineCkeditor = false;
+                $scope.showDiv = function () {
+                    $scope.toggleGuidelineCkeditor = !$scope.toggleGuidelineCkeditor;
+                };   
         
                 $scope.delete = function (data) {
                     data.nodes = [];
@@ -13,22 +15,14 @@
                     var post = data.nodes.length + 1  ;
                     var newNode = data.name + post + '.' ;
                     data.nodes.push({name: newNode, nodes: []});
-                    // cache = currentCache;
-                     //currentCache.push(cached);
-               
-                
-                if(newNode !== ''){
-                    
-                    var newNode = '';
-                    
-                } };
+                    };
                
 
-                $scope.toggle = function () {
+               /* $scope.toggle = function () {
                      $scope.showhide = !$scope.showhide;
 
                    
-                };
+                };*/
 
                 $scope.tree = [{
                         name: "",
