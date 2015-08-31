@@ -7,22 +7,18 @@
     <body>
         <div ng-controller="ChecklistController">
             <div>
-
                 <div ng-repeat="checklist in checklists" class="sm">
                     <div><input type="checkbox" ng-model="checklist.done" />
-                    {{$index + 1}}.                     
-                    {{checklist.text| uppercase}}</div>
-                    
+                        {{$index + 1}}.                     
+                        {{checklist.text}}</div>            
                 </div>        
-                <br/>   
             </div>
-                       <label><form ng-submit="addChecklist()">
-                    <label> <input class="form-control" type="text" ng-model="checklistText"
-                                   placeholder="add new checklist here">
-                    </label>
-                    <button class="btn btn-success"><i class="fa fa-plus"></i></button>
+            <form ng-submit="addChecklist()">
+                <label><input class="form-control" type="text" ng-model="checklistText"
+                              placeholder="add new checklist here"></label>
 
-                </form><!--</label>&nbsp;<button class="btn btn-default" ng-click="delete()"><i class="fa fa-trash-o"></i></button>-->
+                    <button class="btn btn-success" ng-click="addChecklist()"><i class="fa fa-plus"></i></button>
+            </form>
             <br/>
             <div>
                 <button class="btn btn-info">Save</button>  
@@ -32,4 +28,3 @@
         </div>
     </body>
 </html>
-
