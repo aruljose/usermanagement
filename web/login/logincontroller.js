@@ -15,5 +15,9 @@
     $scope.redirectSideTreeMenu = function () {
         $window.location.href = 'menu/sidemenuUserTree.html';        
     };
+    
+     $scope.redirectEnterprise = function () {
+        $window.location.href = 'menu/enterprisemenu.html';        
+    };
 
 });
