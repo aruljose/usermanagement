@@ -16,5 +16,7 @@ app.controller('EnterpriseController', ['$scope', function ($scope) {
             $scope.enterprise.contact = "";
             $scope.enterprise.address = "";
             $scope.enterprise.email = "";
+            
+            $scope.submitted  = false;
         };
     }]);

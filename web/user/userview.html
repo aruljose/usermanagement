@@ -33,7 +33,7 @@
             <div ng-show="userFormPopup">
 
 
-                <form name="userFormRegister" class="form-horizontal"  ng-submit="saveUser()" novalidate>
+                <form name="userFormRegister" class="form-horizontal"  ng-submit="saveUser()" validate>
 
                     <div class="form-group">
                         <label class="control-label col-sm-3" for="user.firstname">FirstName:</label>
@@ -85,10 +85,11 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="control-label col-sm-3" for="enterprise">Enterprise:</label>
+                        <label class="control-label col-sm-3" for="user.enterprise">Enterprise:</label>
                         <div class="col-sm-2">
-                            <select class="form-control" ng-model="user.enterprise" name="enterprise" required>
-                                <option ng-disabled="true">Select Enterprise</option>
+                            <select type="select" name="enterprise" ng-model="user.enterprise" class="form-control"   id="user.enterprise" required>
+                                <option></option>
+                                <!--<option ng-disabled="true">Select Enterprise</option>-->
                                 <option>Oracle</option>
                                 <option>RedHat</option>
                                 <option>Linux</option>

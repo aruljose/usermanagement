@@ -2,7 +2,7 @@
 app.controller('UserController', ['$scope', function ($scope) {
         $scope.showUserForm = function () {
 
-            $scope.userFormPopup = true;
+            $scope.userFormPopup = !$scope.userFormPopup;
         };
 
         $scope.users = [];
@@ -21,10 +21,8 @@ app.controller('UserController', ['$scope', function ($scope) {
             $scope.user.lastname = "";
             $scope.user.password = "";
             $scope.user.email = "";
-            $scope.user.enterprise = "";
-            
-            
-
+            $scope.user.enterprise = "";       
+          
         };
 
     }]);
