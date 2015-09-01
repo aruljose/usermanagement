@@ -1,6 +1,7 @@
 app.directive('ckEditor', [function () {
     return {
         require: '?ngModel',
+        
         link: function ($scope, elm, attr, ngModel) {
 
             var ck = CKEDITOR.replace(elm[0]);
@@ -19,16 +20,18 @@ app.directive('ckEditor', [function () {
 }])
 
 function editorController($scope){
-
-$scope.ckeditorHide = false;
-        $scope.toggleckeditopen = function() {
+//$scope.ckeditorHide = true;
+       $scope.toggleckeditopen = function() {
             $scope.ckeditorHide = $scope.ckeditorHide = false;
         };
         
 	$scope.toggleckeditclose = function() {
             $scope.ckeditorHide = $scope.ckeditorHide =true;
         };
-
+$scope.showDiv = function () {
+    $scope.toggleckeditor = !$scope.toggleckeditor;
+    
+}
 
 
     $scope.ckEditors = [];
@@ -37,7 +40,6 @@ $scope.ckeditorHide = false;
        // $scope.ckEditors.push({value:randsss});
     
 $scope.save = function () {
-    
     $scope.ckEditors.push({
         editorvalue : $scope.editor.value
     })

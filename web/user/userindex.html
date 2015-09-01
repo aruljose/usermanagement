@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Menu</title>
+        <link href="../menu/sidemenu.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-app = "userManagementApp">
+        <div id="wrapper">
+            <div class = "navbar navbar-inverse navbar-fixed-top">
+
+                <label class="pull-left"><a href="#menu-toggle" id="menu-toggle">
+                        <img class = "imgtag" src="../menu/toggles.png"/>
+                        <!--<span class = "glyphicon glyphicon-menu-hamburger fa-2x"></span>-->				
+                    </a>
+                    <img src="../menu/logo.png"/>
+                </label>
+
+                <div class="pull-right"><label><h5>User</h5></label> 
+                    <img src="../menu/user-icon.png" class = "img-circle"/>
+                </div>
+
+            </div>
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <h4> Project </h4>
+                    </li>
+                    <li>
+                        <a href="#user">Project 1</a>
+                    </li>
+                    <li>
+                        <a href="#user">Project 2</a>
+                    </li>
+                    <li>
+                        <a href="#user">Project 3</a>
+                    </li>                 
+
+                </ul>
+            </div>
+            <div class = "ngview">             
+                <ng-view></ng-view>        
+            </div>
+        </div>
+
+
+        <div class = "navbar-fixed-bottom">           
+            <p class = "text-center">Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>           
+        </div>
+        <script src = "../js/app.js"></script>
+        <script src = "../user/usercontroller.js"></script>
+        <script src = "../ckeditor/ckeditor.js"></script>
+        <script src = "userRouteProvider.js"></script>
+    </body>
+</html>
