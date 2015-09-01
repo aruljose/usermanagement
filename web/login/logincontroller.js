@@ -12,7 +12,7 @@
         $window.location.href = 'menu/sidemenus.html';        
     };
     
-    $scope.redirectUserindex = function () {alert("user");
+    $scope.redirectUserindex = function () {
         $window.location.href = 'user/userindex.html';        
     };
     
