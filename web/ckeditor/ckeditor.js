@@ -1,59 +1,74 @@
-app.directive('ckEditor', [function () {
+app.controller("editorController", function ($scope) {
+    $scope.ckeditorarray = {};
+});
+app.directive("clickToEdit", function () {
+    var editorTemplate = '' +
+            '<div class="click-to-edit">' +
+            '<div ng-hide="editor.editorEnabled">' +
+            '<button class="btn btn-info pull-right" ng-click="enableEditor()">Edit</button>' +
+            '<div class="clearfix"></div>' +
+            '</div>' +
+            '<div ng-show="editor.editorEnabled">' +
+            '<textarea data-ng-model="editor.editableValue" data-ck-editor id="ckeditor">' +
+            '</textarea>' + '<br>' +
+            '<div class = "pull-right">' +
+            '<button class="btn btn-primary" ng-click="save()">Save</button>' +
+            '<button class="btn btn-danger" ng-click="disableEditor()">cancel</button>' +
+            '</div>' +
+            '</div>' +
+            '</div>';
     return {
-        require: '?ngModel',
-        
-        link: function ($scope, elm, attr, ngModel) {
-
-            var ck = CKEDITOR.replace(elm[0]);
-
-            ck.on('pasteState', function () {
-                $scope.$apply(function () {
-                    ngModel.$setViewValue(ck.getData());
+        restrict: "A",
+        replace: true,
+        template: editorTemplate,
+        scope: {
+            value: "=clickToEdit"
+        },
+        link: function (scope, element, attrs) {
+            scope.editor = {
+                editableValue: scope.value,
+                editorEnabled: true
+            };
+            scope.enableEditor = function () {
+                scope.editor.editorEnabled = true;
+                scope.editor.editableValue = scope.value;
+                setTimeout(function () {
+                    // element.find('input')[0].focus();
+                    //element.find('input').focus().select(); // w/ jQuery
                 });
-            });
-
-            ngModel.$render = function (value) {
-                ck.setData(ngModel.$modelValue);
+            };
+            scope.disableEditor = function () {
+                scope.editor.editorEnabled = false;
+            };
+            scope.save = function () {
+                scope.value = scope.editor.editableValue;
+                scope.disableEditor();
             };
         }
     };
-}])
+});
+app.directive('ckEditor', [function () {
+        return {
+            require: '?ngModel',
+            link: function ($scope, elm, attr, ngModel) {
 
-function editorController($scope){
-//$scope.ckeditorHide = true;
-       $scope.toggleckeditopen = function() {
-            $scope.ckeditorHide = $scope.ckeditorHide = false;
+                var ck = CKEDITOR.replace(elm[0]);
+
+                ck.on('pasteState', function () {
+                    $scope.$apply(function () {
+                        ngModel.$setViewValue(ck.getData());
+                    });
+                });
+
+                ngModel.$render = function (value) {
+                    ck.setData(ngModel.$modelValue);
+                };
+            }
         };
-        
-	$scope.toggleckeditclose = function() {
-            $scope.ckeditorHide = $scope.ckeditorHide =true;
-        };
-$scope.showDiv = function () {
-    $scope.toggleckeditor = !$scope.toggleckeditor;
-    
-}
-
-
-    $scope.ckEditors = [];
-   
-       // var randsss = "";
-       // $scope.ckEditors.push({value:randsss});
-    
-$scope.save = function () {
-    $scope.ckEditors.push({
-        editorvalue : $scope.editor.value
-    })
-//$scope.ckeditordata = CKEDITOR.instances.ckeditor.getData();
-
-$scope.ckeditorHide = $scope.ckeditorHide =true;
-
-//console.log( CKEDITOR.instances.ckeditor.getData());
-}
-}
-
-app.filter('htmlToPlaintext', function() {
-    return function(editor) {
-      return  editor ? String(editor).replace(/<[^>]+>/gm, '') : '';
+    }]);
+app.filter('htmlToPlaintext', function () {
+    return function (editor) {
+        return  editor ? String(editor).replace(/<[^>]+>/gm, '') : '';
     };
-  }
+}
 );
