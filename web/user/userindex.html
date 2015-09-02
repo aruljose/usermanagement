@@ -3,7 +3,8 @@
     <head>
         <title>User Index</title>
         <link href="../css/sidemenuUserTree.css" rel="stylesheet">
-        <link href="../css/sidemenu.css" rel="stylesheet">       
+        <link href="../css/sidemenu.css" rel="stylesheet">  
+        <link href="../css/userdetail.css" rel="stylesheet">  
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
@@ -20,7 +21,7 @@
                 <label class="pull-left"><a href="#menu-toggle" id="menu-toggle">
                         <img class = "imgtag" src="../menu/toggles.png"/>
                         <!--<span class = "glyphicon glyphicon-menu-hamburger fa-2x"></span>-->				
-                   </a>
+                    </a>
                     <img src="../menu/logo.png"/>
                 </label>
 
@@ -31,17 +32,14 @@
             </div><div id="sidebar-wrapper">
                 <ul class="nav">
                     <li class="nav tree">
-                    <h4 class="header">User</h4>
+                        <h4 class="header">User</h4>
                     </li>
                     <li class="nav tree">
                         <a href="#user" ng-repeat="sidelink in sidelinks">{{sidelink.name}}</a></li>
                     <li class="nav tree">
                         <a href="#design" ng-repeat="designphaseuser in designphaseusers">{{designphaseuser.name}}</a></li>
                     <li class="nav tree">
-                        <a href="#engineering" ng-repeat="engineeringphaseuser in engineeringphaseusers">{{engineeringphaseuser.name}}</a></li>
-                  
-                    
-                    
+                        <a href="#engineering" ng-repeat="engineeringphaseuser in engineeringphaseusers">{{engineeringphaseuser.name}}</a></li>          
                     <li class="nav tree">
                         <a href="#npi" ng-repeat="npiuser in npiusers">{{npiuser.name}}</a></li>
                     <li class="nav tree">
@@ -49,14 +47,12 @@
                     <li class="nav tree">
                         <a href="#support" ng-repeat="supportphaseuser in supportphaseusers">{{supportphaseuser.name}}</a></li>
 
-             </ul>
-         </div>
+                </ul>
+            </div>
             <div class = "ngview">             
                 <ng-view></ng-view>        
             </div>
         </div>
-
-
         <div class = "navbar-fixed-bottom">           
             <p class = "text-center">Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>           
         </div>
