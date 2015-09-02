@@ -6,150 +6,27 @@
 
     <body>
         <div class="container">
-            <div class="panel panel-default">
-                <div class="panel panel-heading"><span ng-repeat="sidelink in sidelinks">{{sidelink.name}}</span></div>
+            <div class="panel panel-default" style="width: 95%; margin-left: 5px">
+                <div class="panel panel-heading"><span ng-repeat="sidelink in sidelinks">
+                        <h1 class="section-header">{{sidelink.name}}</h1></span>
+                </div>
                 <div class="panel panel-body">
-
-
-
                     <div ng-controller="ProjectDetailController">
-
-
                         <div class="container">
                             <div ng-repeat="link in links"> 
 
-                                <ol ng-show="link.sub">
-                                    <li ng-repeat="subItem in link.sub"> {{subItem.name}}
+                                <ul class="list-unstyled" ng-show="link.sub" style="width: 90%">
+                                    <li ng-repeat="subItem in link.sub"> <h2 class="itemHeader">{{subItem.name}}</h2>
+                                        <span class="">
                                             <button click-to-edit="ckeditorarray.editor"></button>
+                                        </span>                                        
                                     </li>
-                                </ol>
+                                    
+                                </ul>
                             </div>
                         </div>
                     </div>
 
-                    <!--<ol>
-                        <li class="form-group"><label><h3>Section1</h3></label>
-                            <button click-to-edit="ckeditorarray.editor"></button>
-                    <!--<button class="btn-primary" ng-click="enableEditor()" data-toggle="collapse" data-target="#editorToggle">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                    </button>
-                   
-                    <div id="editorToggle" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                    </div>-->
-
-                    <!-- </li>
-                     <ol>
-                         <li><label><h5>stage1</h5></label>
-                             <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglestage">
-                                 <span class="glyphicon glyphicon-pencil"></span>
-                             </button>
-                             <div id="editorTogglestage" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                             </div>
-                         </li>        
-                         <li><label><h5>stage2</h5></label>
-                             <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglestageone">
-                                 <span class="glyphicon glyphicon-pencil"></span>
-                             </button>
-                             <div id="editorTogglestageone" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                             </div>
-                         </li>
-
-                     </ol>
-
-
-                     <li><label><h3>Section2</h3></label>
-                         <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggleone">
-                             <span class="glyphicon glyphicon-pencil"></span>
-                         </button>
-                         <div id="editorToggleone" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                         </div>
-                     </li>
-
-
-                     <ol>
-                         <li><label><h5>stage1</h5></label>                
-                             <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggleonestage">
-                                 <span class="glyphicon glyphicon-pencil"></span>
-                             </button>
-                             <div id="editorToggleonestage" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                             </div>                
-                         </li>
-
-                         <ol>
-                             <li><label><h6>sub stage1</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggleonestageone">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorToggleonestageone" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div>                     
-                             </li>
-                             <li><label><h6>sub stage2</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggleonestagetwo">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorToggleonestagetwo" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div> 
-                             </li>
-                             <li><label><h6>sub stage3</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggleonestagethree">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorToggleonestagethree" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div> 
-                             </li>
-                         </ol>
-                         <li><label><h5>stage2</h5></label>
-                             <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorToggletwostage">
-                                 <span class="glyphicon glyphicon-pencil"></span>
-                             </button>
-                             <div id="editorToggletwostage" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                             </div>
-                         </li>
-                         <li><label><h5>stage3</h5></label>
-                             <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglethreestage">
-                                 <span class="glyphicon glyphicon-pencil"></span>
-                             </button>
-                             <div id="editorTogglethreestage" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                             </div>
-                         </li>
-                         <ol>
-                             <li><label><h6>sub stage1</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglethreestageone">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorTogglethreestageone" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div>
-                             </li>
-                             <li><label><h6>sub stage2</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglethreestagetwo">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorTogglethreestagetwo" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div>
-                             </li>
-                             <li><label><h6>sub stage3</h6></label>
-                                 <button class="btn-primary" ng-click="toggleckeditopen()" data-toggle="collapse" data-target="#editorTogglethreestagethree">
-                                     <span class="glyphicon glyphicon-pencil"></span>
-                                 </button>
-                                 <div id="editorTogglethreestagethree" class="collapse" ng-include="'../ckeditor/ckeditorview.html'">
-
-                                 </div>
-                             </li>
-                         </ol>
-                     </ol>
-                 </ol> --> 
                 </div>
             </div>
         </div>

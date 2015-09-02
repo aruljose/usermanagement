@@ -4,9 +4,9 @@ app.controller("editorController", function ($scope) {
 app.directive("clickToEdit", function () {
     var editorTemplate = '' +
             '<div class="click-to-edit">' +
-                    '<div ng-hide="editor.editorEnabled">' +
-                        '<button class="btn btn-info btn-xs" ng-click="enableEditor()"><i class="fa fa-pencil"></i></button><br>' +
-            '{{value | htmlToPlaintext}}' +
+            '<div ng-hide="editor.editorEnabled">' +
+            '<div ng-bind-html="value | unsafe"></div>' +
+            '[ <span class="editButton" ng-click="enableEditor()">Edit</span> ]<br>' +
             '</div>' +
             '<div ng-show="editor.editorEnabled">' +
             '<textarea data-ng-model="editor.editableValue" data-ck-editor id="ckeditor">' +
@@ -68,7 +68,12 @@ app.directive('ckEditor', [function () {
     }]);
 app.filter('htmlToPlaintext', function () {
     return function (editor) {
-        return  editor ? String(editor).replace(/<[^>]+>/gm, '') : '';
+        var decoded = $('<div/>').html(editor).html();
+        console.log(decoded);
+        return  decoded;
     };
-}
-);
+});
+
+app.filter('unsafe', function ($sce) {
+    return $sce.trustAsHtml;
+});
