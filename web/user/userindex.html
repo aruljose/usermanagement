@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>User Index</title>
+        <link href="../css/sidemenuUserTree.css" rel="stylesheet">
+        <link href="../css/sidemenu.css" rel="stylesheet">  
+        <link href="../css/userdetail.css" rel="stylesheet">  
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-app = "userManagementApp" ng-controller="userprojectdetailController">
+        <div id="wrapper">
+            <div class = "navbar navbar-inverse navbar-fixed-top" >
+
+                <label class="pull-left"><a href="#menu-toggle" id="menu-toggle">
+                        <img class = "imgtag" src="../menu/toggles.png"/>
+                        <!--<span class = "glyphicon glyphicon-menu-hamburger fa-2x"></span>-->				
+                    </a>
+                    <img src="../menu/logo.png"/>
+                </label>
+
+                <div class="pull-right"><label><h5>Arul Jose </h5></label> 
+                    <img src="../menu/user-icon.png" class = "img-circle"/>
+                </div>
+
+            </div><div id="sidebar-wrapper">
+                <h4 class="nav tree section-projectname" data-toggle = "collapse" data-target = "#userProject1">Cisco 700W</h4>
+                <ul class="nav collapse" id = "userProject1">
+                    <!--<li class="nav tree">
+                        <h4 class="header">User</h4>
+                    </li>-->
+                    <li class="nav tree">
+                        <a href="#user" ng-repeat="sidelink in sidelinks">{{sidelink.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#design" ng-repeat="designphaseuser in designphaseusers">{{designphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#engineering" ng-repeat="engineeringphaseuser in engineeringphaseusers">{{engineeringphaseuser.name}}</a></li>          
+                    <li class="nav tree">
+                        <a href="#npi" ng-repeat="npiuser in npiusers">{{npiuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#manufacturing" ng-repeat="manufacturingphaseuser in manufacturingphaseusers">{{manufacturingphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#support" ng-repeat="supportphaseuser in supportphaseusers">{{supportphaseuser.name}}</a></li>
+
+                </ul>
+                
+                <h4 class="nav tree section-projectname" data-toggle = "collapse" data-target = "#userProject2">Juniper 2200</h4>
+                <ul class="nav collapse" id = "userProject2">
+                    <!--<li class="nav tree">
+                        <h4 class="header">User</h4>
+                    </li>-->
+                    <li class="nav tree">
+                        <a href="#user" ng-repeat="sidelink in sidelinks">{{sidelink.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#design" ng-repeat="designphaseuser in designphaseusers">{{designphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#engineering" ng-repeat="engineeringphaseuser in engineeringphaseusers">{{engineeringphaseuser.name}}</a></li>          
+                    <li class="nav tree">
+                        <a href="#npi" ng-repeat="npiuser in npiusers">{{npiuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#manufacturing" ng-repeat="manufacturingphaseuser in manufacturingphaseusers">{{manufacturingphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#support" ng-repeat="supportphaseuser in supportphaseusers">{{supportphaseuser.name}}</a></li>
+
+                </ul>
+            </div>
+            <div class = "ngview">             
+                <ng-view></ng-view>        
+            </div>
+        </div>
+        <div class = "navbar-fixed-bottom">           
+            <p class = "text-center">Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>           
+        </div>
+        <script src = "../js/app.js"></script>
+        <script src = "../ckeditor/ckeditor.js"></script>
+        <script src = "../user/userRouteProvider.js"></script>
+        <script src = "projectdetail.js"></script>
+        <script src = "userProjectdetail.js"></script>
+    </body>
+</html>

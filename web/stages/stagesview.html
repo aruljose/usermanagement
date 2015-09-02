@@ -1,0 +1,44 @@
+
+<title>Tree for Template Creation</title>
+
+<div class="container">
+    <div>
+        <div ng-repeat="data in tree" ng-include="'treemenu.html'"></div>
+       <div ng-show="showhide">
+
+            <div class="modal-header"> 
+                <!--<button type="button" class="max" data-dismiss="modal">&plus</button>
+                <button type="button" class="min" data-dismiss="modal">&minus;</button>-->
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Guidelines and Checklists</h4>          
+            </div>
+            
+            <div class="modal-footer">
+                <div class="ckedit"> <nav class="navbar navbar-inverse"></nav>
+                    <div ng-include="'../ckeditor/ckeditorview.html'"></div>
+                </div>
+
+                <div class="checklist well">
+                    <div ng-include="'../sections/checklist.html'"></div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+<!--<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../css/stagesview.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+<script src="http://code.angularjs.org/1.2.5/angular.js"></script>
+<script src="../js/app.js"></script>
+
+<script src="../sections/checklist.js"></script>
+<script src="../ckeditor/ckeditor.js"></script>
+<script src="stagesController.js"></script>-->

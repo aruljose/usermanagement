@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+        <form ng-contoller="LoginController" class="form-horizontal text-center" name="userForm" ng-submit="submitForm()" novalidate>
+
+            <div class="container" style="width:40%;">
+                <div class="jumbotron">
+                    <img src="images/user-icon.png" class="img-circle"><br/><br/>
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+                        <label class="control-label col-sm-4">Username</label>
+                        <div class="col-sm-6">
+                            <input type="email" class="form-control" ng-model="email" placeholder="Enter Email">
+                            
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
+                        <label class="control-label col-sm-4">Password</label>
+                        <div class="col-sm-6">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Enter Password" ng-minlength="6" ng-maxlength="10">
+                        </div>
+                    </div>
+
+                    <!--<label class="radio-inline"><input type="radio" name="name" checked/> User</label>
+                    <label class="radio-inline"><input type="radio" name="name" /> Enterprise</label>
+                    <label class="radio-inline"><input type="radio" name="name" /> Admin</label> <br><br/>-->
+
+                    <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid" ng-click="redirectSideMenu()">Admin</button>
+                <button type="submit" class="btn btn-info" ng-disabled="userForm.$invalid" ng-click="redirectEnterprise()">Enterprise</button>
+                <button type="submit" class="btn btn-warning" ng-disabled="userForm.$invalid" ng-click="redirectUserindex()">User</button><br><br>
+                <button type="reset" class="btn btn-success">Reset</button>
+
+                    
+                </div>
+            </div>
+
+        </form>
+
+    </body>
+</html>              
+                  

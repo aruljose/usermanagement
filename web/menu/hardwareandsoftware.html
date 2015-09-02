@@ -1,0 +1,99 @@
+
+<style>
+    .bootstrap-demo{margin:30px;}
+</style>
+<body>
+    <div class="bootstrap-demo">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Hardware/Software Section</h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="container">
+
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#hardware">Hardware</a></li>
+                        <li><a data-toggle="tab" href="#software">Software</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="hardware" class="tab-pane fade in active">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Configuration</th>
+                                        <th>Verified ?</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Processor</td>
+                                        <td>Intel</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Memory</td>
+                                        <td>32GB</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chipset</td>
+                                        <td>X400</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <button class="btn btn-primary">Save</button>&nbsp;<button class="btn btn-success">Cancel</button>&nbsp;<button class="btn btn-default">History</button><button class="btn btn-warning" style="float:right;">Preview </button>
+
+
+                        </div>
+                        <div id="software" class="tab-pane fade">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Version</th>
+                                        <th>Verified ?</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Redhat</td>
+                                        <td>6.2</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Java</td>
+                                        <td>1.8</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ubuntu</td>
+                                        <td>14.10</td>
+                                        <td><input type="checkbox"></td>
+                                        <td><button class="btn btn-primary">+</button>&nbsp;<button class="btn btn-success">X</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>    
+                            <button class="btn btn-primary">Save</button>&nbsp;<button class="btn btn-success">Cancel</button>&nbsp;<button class="btn btn-default">History</button><button class="btn btn-warning" style="float:right;">Preview </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+
+
+                </div>
+            </div>
+        </div>
+</body>

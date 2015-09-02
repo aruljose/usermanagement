@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <form class="form-horizontal">
+            <div class="container">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Enterprise</div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Project Name</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" placeholder="Project Name">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Start Date</label>
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" placeholder="Start Date" id="datepicker">
+                            </div> 
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2">Template</label>
+                             <div class="col-sm-4">
+                            <select class="form-control">
+                                <option>project1</option>
+                                <option>project2</option>
+                                <option>project3</option>
+                                <option>project4</option>
+                            </select>
+                             </div>
+                        </div>
+                        <div class="enterprise">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel panel-heading">Hardware</div>
+                                    <div class="panel panel-body">
+                                        <div ng-include="'../sections/checklist.html'"></div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col-sm-6">
+                                <div class="panel panel-primary">
+                                    <div class="panel panel-heading">Software</div>
+                                    <div class="panel panel-body">
+                                        <div ng-include="'../sections/checklist.html'"></div>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+
+                                <!--<div class="panel panel-primary pull-right">
+                                    <div class="panel panel-heading">Software</div>
+                                    <div class="panel panel-body">
+                                        <div ng-include="'../sections/checklist.html'"></div>
+                                    </div>
+                                </div> --> 
+                            </div>
+                        </div>
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

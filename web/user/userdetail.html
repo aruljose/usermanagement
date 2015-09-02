@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>User Detail Views</title>
+       
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="panel panel-default" style="width: 95%; margin-left: 5px">
+                <div class="panel panel-heading"><span ng-repeat="sidelink in sidelinks">
+                        <h1 class="section-header">{{sidelink.name}}</h1></span>
+                </div>
+                <div class="panel panel-body">
+                    <div ng-controller="ProjectDetailController">
+                        <div class="container">
+                            <div ng-repeat="link in links"> 
+
+                                <ul class="list-unstyled" ng-show="link.sub" style="width: 90%">
+                                    <li ng-repeat="subItem in link.sub"> <h2 class="itemHeader">{{subItem.name}}</h2>
+                                        <span class="">
+                                            <button click-to-edit="ckeditorarray.editor"></button>
+                                        </span>                                        
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

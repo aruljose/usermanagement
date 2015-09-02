@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>                
+        <script src="http://code.angularjs.org/1.2.5/angular.js"></script>
+        <script src="http://code.angularjs.org/1.2.5/angular-route.js"></script>
+
+        <script src="js/app.js"></script>
+        <script src="routeProvider.js"></script>
+        <script src="login/logincontroller.js"></script>        
+    </head>
+    <title>Index Page</title>
+    <body ng-app="userManagementApp">
+        <nav class="navbar navbar-inverse">
+            <img src="images/netphenix.png">
+            <div class="header pull-right">
+                <a class="navbar-brand" href="#login"><span class="glyphicon glyphicon-log-in">Login</span></a>
+                <a class="navbar-brand" href="#register"><span class="glyphicon glyphicon-user">Register</span></a>
+            </div>
+        </nav><br/>
+
+        <div class="login">
+            <div ng-view=""></div>
+        </div>
+
+        <nav class="navbar-fixed-bottom navbar-inverse">
+            <div class="footer text-center">
+                <p style="color:white;">© 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>
+            </div>
+        </nav>
+    </body>
+</html>

@@ -4,9 +4,17 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 */
 /* 
-    Created on : Aug 3, 2015, 6:11:42 PM
+    Created on : Aug 13, 2015, 1:56:39 PM
     Author     : arun
 */
-navbar-brand{
-     float: right; 
+
+.ckedit{
+    float:left;
+}
+.checklist{
+    float:right;  
+    //overflow: scroll;
+    height:60%;
+    width:40%;
+
 }

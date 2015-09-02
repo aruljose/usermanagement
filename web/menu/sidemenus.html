@@ -1,51 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <title>SideMenu</title>
+        <link href="sidemenu.css" rel="stylesheet">
+        <link rel="stylesheet" href="../stages/stages.css">
+        <link rel="stylesheet" href="../css/stagesview.css">
+        <link rel="stylesheet" href="../css/document.css">
 
-<head>
+        <link rel="stylesheet" href="../css/templatefrontpage.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script src="http://cdn.ckeditor.com/4.5.2/standard-all/ckeditor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <body ng-app = "userManagementApp">
+        <div id="wrapper">
+            <div class = "navbar navbar-inverse navbar-fixed-top">
 
-    <title>SideMenu</title>
+                <label class="pull-left"><a href="#menu-toggle" id="menu-toggle">
+                        <img class = "imgtag" src="toggles.png"/>
+                        <!--<span class = "glyphicon glyphicon-menu-hamburger fa-2x"></span>-->				
+                    </a>
+                    <img src="logo.png"/>
+                </label>
 
-    <link href="sidemenu.css" rel="stylesheet">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+                <div class="pull-right"><label><h5>Admin</h5></label> 
+                    <img src="user-icon.png" class = "img-circle"/>
+                </div>
 
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular.min.js"></script>
-  
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.25/angular-route.js"></script>
-
-
-</head>
-
-<body ng-app = "myApp">
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
+            </div>
+            <div id="sidebar-wrapper">
+                <ul class="sidebar-nav">
+                    <li class="sidebar-brand">
+                        <h4> Menu </h4>
+                    </li>
+                    <li>
+                        <a href="#template">Template</a>
+                    </li>
+                    <li>
+                        <a href="#user">User</a>
+                    </li>
+                    <li>
+                        <a href="#enterprise">Enterprise</a>
+                    </li>
                     
-                      <h4>  User Management </h4>
-                    
-                </li>
-                <li>
-                    <a href="#">User</a>
-                </li>
-                <li>
-                    <a href="#login">Enterprise</a>
-                </li>
-                <li>
-                    <a href="#">Admin</a>
-                </li>
-                
-            </ul>
+
+
+                </ul>
+            </div>
+<div class = "ngview">             
+            <ng-view></ng-view>        
         </div>
-        <ng-view></ng-view>
+        </div>
         
-    </div>
 
-</body>
-<script src = "sidemenuController.js"></script>
+        <div class = "navbar-fixed-bottom">           
+            <p class = "text-center">Copyright (c) 2014 - 2023 NetPhenix IT Solutions. All Rights Reserved.</p>           
+        </div>
+        <script src = "../js/app.js"></script>
+        <script src = "../user/usercontroller.js"></script>
+        <script src = "../enterprise/enterprisecontroller.js"></script>
+        <script src = "../admin/admincontroller.js"></script>
+        <script src = "../stages/stagesController.js"></script>
+        <script src = "../sections/checklist.js"></script>
+        <script src = "../ckeditor/ckeditor.js"></script>
+        <script src = "sidemenuRouteProvider.js"></script>
+    </body>
 </html>

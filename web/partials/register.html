@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    </head>
+    <title>Register</title>
+    <body>
+
+        <form class="form-horizontal text-center" ng-contoller="RegisterController" name="registerForm" ng-submit="submitForm()" novalidate>
+            <div class="container" style="width:60%;">
+                <div class="jumbotron">
+                    <h2>Enterprise Register</h2><br/>
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.firstname.$invalid && !registerForm.firstname.$pristine }">
+                        <label class="control-label col-sm-5">Firstname</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" ng-model="firstname" placeholder="Enter Firstname" ng-minlength="4" ng-maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.lastname.$invalid && !registerForm.lastname.$pristine }">
+                        <label class="control-label col-sm-5">Lastname</label>
+                        <div class="col-sm-4">
+                            <input type="text" class="form-control" ng-model="lastname" placeholder="Enter Lastname" ng-minlength="4" ng-maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.email.$invalid && !registerForm.email.$pristine }">
+                        <label class="control-label col-sm-5">Email</label>
+                        <div class="col-sm-4">
+                            <input type="email" class="form-control" ng-model="email" placeholder="Enter Email">
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.password.$invalid && !registerForm.email.$pristine }">
+                        <label class="control-label col-sm-5">Password</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" ng-model="password" placeholder="Enter Password" ng-minlength="4" ng-maxlength="10">
+                        </div>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error' : registerForm.confirmpassword.$invalid && !registerForm.confirmpassword.$pristine }">
+                        <label class="control-label col-sm-5">Confirm Password</label>
+                        <div class="col-sm-4">
+                            <input type="password" class="form-control" ng-model="confirmpassword" placeholder="Enter Confirm Password" ng-minlength="4" ng-maxlength="10">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" ng-disabled="registerForm.$invalid">Submit</button>
+                    <a href="#/login" class="btn btn-default">Cancel</a>
+
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

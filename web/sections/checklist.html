@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div ng-controller="ChecklistController">
+            <div>
+                <div ng-repeat="checklist in checklists" class="sm">
+                    <div><input type="checkbox" ng-model="checklist.done" />
+                        {{$index + 1}}.                     
+                        {{checklist.text}}</div>            
+                </div>        
+            </div>
+            <form ng-submit="addChecklist()">
+                <label><input class="form-control" type="text" ng-model="checklistText"
+                              placeholder="add new checklist here"></label>
+
+                    <button class="btn btn-success" ng-click="addChecklist()"><i class="fa fa-plus"></i></button>
+            </form>
+            <br/>
+            <div>
+                <button class="btn btn-info">Save</button>  
+                <button class="btn btn-warning" ng-click="delete()">Delete</button>
+                <button class="btn btn-default">Cancel</button>
+            </div>
+        </div>
+    </body>
+</html>
