@@ -5,7 +5,7 @@ app.directive("clickToEdit", function () {
     var editorTemplate = '' +
             '<div class="click-to-edit">' +
                     '<div ng-hide="editor.editorEnabled">' +
-                        '<button class="btn-info" ng-click="enableEditor()"><span class="glyphicon glyphicon-pencil"></span></button><br>' +
+                        '<button class="btn btn-info btn-xs" ng-click="enableEditor()"><i class="fa fa-pencil"></i></button><br>' +
             '{{value | htmlToPlaintext}}' +
             '</div>' +
             '<div ng-show="editor.editorEnabled">' +

@@ -1,0 +1,22 @@
+
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel panel-heading"><span ng-repeat="manufacturingphaseuser in manufacturingphaseusers">{{manufacturingphaseuser.name}}</span></div>
+                <div class="panel panel-body">
+
+
+
+                    <div ng-controller="ProjectDetailController">
+
+
+                        <div class="container">
+                            <div ng-repeat="manufacturingphase in manufacturingphases">
+
+                                <ol ng-show="manufacturingphase.sub">
+                                    <li ng-repeat="subItem in manufacturingphase.sub"> {{subItem.name}}
+                                            <button click-to-edit="ckeditorarray.editor"></button>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
