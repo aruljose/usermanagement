@@ -6,6 +6,7 @@ app.controller('UserController', ['$scope', function ($scope) {
         };
 
         $scope.users = [];
+        
 
         $scope.saveUser = function () {
 
@@ -21,8 +22,8 @@ app.controller('UserController', ['$scope', function ($scope) {
             $scope.user.lastname = "";
             $scope.user.password = "";
             $scope.user.email = "";
-            $scope.user.enterprise = "";       
-          
+            $scope.user.enterprise = "";
+
         };
 
     }]);
