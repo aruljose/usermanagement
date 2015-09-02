@@ -25,10 +25,17 @@
 }
 
 .header {
-    border-bottom: 1px solid #151515;
+    //border-bottom: 1px solid #151515;
+    height: 10%;
+    margin-top: 15%;
     //text-indent: 20px;
     //line-height: 20px;
 }
 .tree-toggle {
-    margin-left: 6px;
+    margin-left: 2%;
+}
+#sidebar-wrapper .nav {
+     padding-left: 5%; 
+     margin-bottom: 5%; 
+     list-style: none;
 }
