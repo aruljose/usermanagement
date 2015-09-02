@@ -1,0 +1,22 @@
+
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel panel-heading"><span ng-repeat="supportphaseuser in supportphaseusers">{{supportphaseuser.name}}</span></div>
+                <div class="panel panel-body">
+
+
+
+                    <div ng-controller="ProjectDetailController">
+
+
+                        <div class="container">
+                            <div ng-repeat="supportphase in supportphases">
+
+                                <ol ng-show="supportphase.sub">
+                                    <li ng-repeat="subItem in supportphase.sub"> {{subItem.name}}
+                                            <button click-to-edit="ckeditorarray.editor"></button>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>

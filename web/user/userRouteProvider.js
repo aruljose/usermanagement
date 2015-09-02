@@ -4,9 +4,28 @@
                     
             .when('/user', {
                 templateUrl : 'userdetail.html',
-                controller  : 'ProjectDetailController'
-            })          
-            
+                //controller  : 'ProjectDetailController'
+            })    
+            .when('/design', {
+                templateUrl : 'designphase.html',
+                //controller  : 'ProjectDetailController'
+            })
+            .when('/engineering', {
+                templateUrl : 'engineeringphase.html',
+                //controller  : 'ProjectDetailController'
+            })
+            .when('/npi', {
+                templateUrl : 'npi.html',
+                //controller  : 'ProjectDetailController'
+            })
+            .when('/manufacturing', {
+                templateUrl : 'manufacturingphase.html',
+                //controller  : 'ProjectDetailController'
+            })
+            .when('/support', {
+                templateUrl : 'supportphase.html',
+                //controller  : 'ProjectDetailController'
+            })
 	    .otherwise({
             redirectTo: '/'
         });
