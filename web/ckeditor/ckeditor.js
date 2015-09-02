@@ -4,9 +4,9 @@ app.controller("editorController", function ($scope) {
 app.directive("clickToEdit", function () {
     var editorTemplate = '' +
             '<div class="click-to-edit">' +
-            '<div ng-hide="editor.editorEnabled">' +
-            '<button class="btn btn-info pull-right" ng-click="enableEditor()">Edit</button>' +
-            '<div class="clearfix"></div>' +
+                    '<div ng-hide="editor.editorEnabled">' +
+                        '<button class="btn-info" ng-click="enableEditor()"><span class="glyphicon glyphicon-pencil"></span></button><br>' +
+            '{{value | htmlToPlaintext}}' +
             '</div>' +
             '<div ng-show="editor.editorEnabled">' +
             '<textarea data-ng-model="editor.editableValue" data-ck-editor id="ckeditor">' +
@@ -27,7 +27,7 @@ app.directive("clickToEdit", function () {
         link: function (scope, element, attrs) {
             scope.editor = {
                 editableValue: scope.value,
-                editorEnabled: true
+                editorEnabled: false
             };
             scope.enableEditor = function () {
                 scope.editor.editorEnabled = true;
