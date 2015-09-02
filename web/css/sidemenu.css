@@ -25,7 +25,7 @@
     transition: all 0.5s ease;
 }
 #wrapper.toggled #sidebar-wrapper {
-    width: 350px;
+    width: 250px;
 }
 #page-content-wrapper {
     width: 100%;
@@ -35,13 +35,13 @@
 .sidebar-nav {
     position: absolute;
     top: 20px;
-    width: 350px;
+    width: 250px;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 .sidebar-nav li {
-	//border-bottom: 1px solid #151515;
+	border-bottom: 1px solid #151515;
     text-indent: 20px;
     line-height: 40px;
 }
@@ -65,13 +65,13 @@
 }
 @media(min-width: 992px) {
     #wrapper {
-        padding-left: 220px;
+        padding-left: 180px;
     }
     #wrapper.toggled {
         padding-left: 0px;
     }
     #sidebar-wrapper {
-        width: 220px;
+        width: 180px;
     }
     #wrapper.toggled #sidebar-wrapper {
         width: 0px;
@@ -118,6 +118,5 @@ height : 35px;
 }
 .ngview {
     margin-top: 5%;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
- 

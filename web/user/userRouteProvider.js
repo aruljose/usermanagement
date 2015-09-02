@@ -4,7 +4,7 @@
                     
             .when('/user', {
                 templateUrl : 'userdetail.html',
-                controller  : 'editorController'
+                controller  : 'ProjectDetailController'
             })          
             
 	    .otherwise({

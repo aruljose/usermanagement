@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>SideMenu</title>
-        <link href="../css/sidemenu.css" rel="stylesheet">
+        <title>User Index</title>
         <link href="../css/sidemenuUserTree.css" rel="stylesheet">
-
-        <link rel="stylesheet" href="../stages/stages.css">
-        <link rel="stylesheet" href="../css/stagesview.css">
-        <link rel="stylesheet" href="../css/document.css">
-
-        <link rel="stylesheet" href="../css/templatefrontpage.css">
+        <link href="../css/sidemenu.css" rel="stylesheet">       
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
@@ -37,10 +31,11 @@
             </div>
             <div id="sidebar-wrapper">
                 <ul class="nav">
-                    <h4 class="header" style="height: 10%; margin-top: 10%;">User</h4>
-                    
+                    <li class="nav tree">
+                    <h4 class="header">User</h4>
+                    </li>
                     <li class="nav tree"> 
-                        <label class="tree-toggle" data-toggle = "collapse" data-target = "#dataToggle">Phase1</label>
+                        <label label-default="" class="tree-toggle nav-header "  data-toggle = "collapse" data-target = "#dataToggle">Phase1</label>
 
                         <ul class="nav tree collapse" id = "dataToggle">
                             <li><a href="#user">Phase1.1</a>
@@ -53,7 +48,7 @@
                         </ul>
 
                     </li>
-                    <li>
+                    <li class="nav tree">
                         <label label-default="" class="tree-toggle nav-header " data-toggle = "collapse" data-target = "#dataToggleone">Phase2</label>
                         <ul class="nav tree collapse" id = "dataToggleone">
                             <li><a href="#user">Phase2.1</a>
@@ -62,7 +57,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="nav tree">
                         <label label-default="" class="tree-toggle nav-header" data-toggle = "collapse" data-target = "#dataToggletwo">Phase3</label>
                         <ul class="nav tree collapse" id = "dataToggletwo">
                             <li><a href="#user">Phase3.1</a>
@@ -73,28 +68,19 @@
                                     <li><a href="#user">Phase3.2.1</a>
                                     </li>
                                     <li>
-                                        <a href="#user">Phase3.2.2</label>
-                                       <!-- <ul class="nav tree" id = "dataToggletwotwo" class = "collapse">
-                                            <li><a href="#user">iPhone</a>
-                                            </li>
-                                            <li><a href="#user">Samsung</a>
-                                            </li>
-                                        </ul>-->
+                                        <a href="#user">Phase3.2.2</a>
+                                       
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>   
-                    <!--<li data-toggle="collapse" data-target = "#toggleqwerty" class="tree-toggle nav-header">qwerty
-                        <ul id="toggleqwerty" class="nav tree collapse">
-                        <li>qwerty1</li>
-                    </ul>
-                        </li>-->
+                    
                 </ul>
             </div>
-                  
-                <ng-view></ng-view>        
-            
+            <div class = "ngview">             
+            <ng-view></ng-view>        
+        </div>
         </div>
 
 
@@ -104,5 +90,6 @@
         <script src = "../js/app.js"></script>
         <script src = "../ckeditor/ckeditor.js"></script>
         <script src = "../user/userRouteProvider.js"></script>
+        <script src = "projectdetail.js"></script>
     </body>
 </html>
