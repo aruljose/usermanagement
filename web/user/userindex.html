@@ -25,15 +25,36 @@
                     <img src="../menu/logo.png"/>
                 </label>
 
-                <div class="pull-right"><label><h5>User</h5></label> 
+                <div class="pull-right"><label><h5>Arul Jose </h5></label> 
                     <img src="../menu/user-icon.png" class = "img-circle"/>
                 </div>
 
             </div><div id="sidebar-wrapper">
-                <ul class="nav">
-                    <li class="nav tree">
+                <h4 class="nav tree section-projectname" data-toggle = "collapse" data-target = "#userProject1">Cisco 700W</h4>
+                <ul class="nav collapse" id = "userProject1">
+                    <!--<li class="nav tree">
                         <h4 class="header">User</h4>
-                    </li>
+                    </li>-->
+                    <li class="nav tree">
+                        <a href="#user" ng-repeat="sidelink in sidelinks">{{sidelink.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#design" ng-repeat="designphaseuser in designphaseusers">{{designphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#engineering" ng-repeat="engineeringphaseuser in engineeringphaseusers">{{engineeringphaseuser.name}}</a></li>          
+                    <li class="nav tree">
+                        <a href="#npi" ng-repeat="npiuser in npiusers">{{npiuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#manufacturing" ng-repeat="manufacturingphaseuser in manufacturingphaseusers">{{manufacturingphaseuser.name}}</a></li>
+                    <li class="nav tree">
+                        <a href="#support" ng-repeat="supportphaseuser in supportphaseusers">{{supportphaseuser.name}}</a></li>
+
+                </ul>
+                
+                <h4 class="nav tree section-projectname" data-toggle = "collapse" data-target = "#userProject2">Juniper 2200</h4>
+                <ul class="nav collapse" id = "userProject2">
+                    <!--<li class="nav tree">
+                        <h4 class="header">User</h4>
+                    </li>-->
                     <li class="nav tree">
                         <a href="#user" ng-repeat="sidelink in sidelinks">{{sidelink.name}}</a></li>
                     <li class="nav tree">
