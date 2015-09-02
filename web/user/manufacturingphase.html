@@ -1,22 +1,27 @@
 
         <div class="container">
-            <div class="panel panel-default">
-                <div class="panel panel-heading"><span ng-repeat="manufacturingphaseuser in manufacturingphaseusers">{{manufacturingphaseuser.name}}</span></div>
+            <div class="panel panel-default" style="width: 95%; margin-left: 5px">
+                <div class="panel panel-heading">
+                    <span ng-repeat="manufacturingphaseuser in manufacturingphaseusers">
+                        <h1 class="section-header">{{manufacturingphaseuser.name}}</h1>
+                    </span>
+                </div>
                 <div class="panel panel-body">
-
-
-
                     <div ng-controller="ProjectDetailController">
-
-
                         <div class="container">
                             <div ng-repeat="manufacturingphase in manufacturingphases">
 
-                                <ol ng-show="manufacturingphase.sub">
-                                    <li ng-repeat="subItem in manufacturingphase.sub"> {{subItem.name}}
+                                <ul class="list-unstyled" ng-show="manufacturingphase.sub" style="width: 90%">
+                                    <li ng-repeat="subItem in manufacturingphase.sub"> 
+                                        <h2 class="itemHeader">{{subItem.name}}</h2>
+                                        <span class="">
                                             <button click-to-edit="ckeditorarray.editor"></button>
+                                        </span>
                                     </li>
-                                </ol>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
