@@ -1,6 +1,7 @@
- <div class="container">
+
+        <div class="container">
             <div class="panel panel-default">
-                <div class="panel panel-heading"><span ng-repeat="npiuser in npiusers"><h1 class="section-header">{{npiuser.name}}</h1></span></div>
+                <div class="panel panel-heading"><span ng-repeat="npiuser in npiusers">{{npiuser.name}}</span></div>
                 <div class="panel panel-body">
 
 
@@ -11,14 +12,11 @@
                         <div class="container">
                             <div ng-repeat="npiphase in npiphases">
 
-                                <ol class="list-unstyled" ng-show="npiphase.sub" style="width: 90%">
-                                    <li ng-repeat="subItem in npiphase.sub"> <h2 class="itemHeader">{{subItem.name}}</h2>
+                                <ol ng-show="npiphase.sub">
+                                    <li ng-repeat="subItem in npiphase.sub"> {{subItem.name}}
                                             <button click-to-edit="ckeditorarray.editor"></button>
                                     </li>
                                 </ol>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
- </div>

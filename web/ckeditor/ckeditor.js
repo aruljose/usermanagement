@@ -8,7 +8,7 @@ app.directive("clickToEdit", function () {
             '<div ng-bind-html="value | unsafe"></div>' +
             '[ <span class="editButton" ng-click="enableEditor()">Edit</span> ]<br>' +
             '</div>' +
-            '<div ng-show="editor.editorEnabled">' +            
+            '<div ng-show="editor.editorEnabled">' +
             '<textarea data-ng-model="editor.editableValue" data-ck-editor id="ckeditor">' +
             '</textarea>' + '<br>' +
             '<div class = "pull-right">' +
@@ -32,7 +32,6 @@ app.directive("clickToEdit", function () {
             scope.enableEditor = function () {
                 scope.editor.editorEnabled = true;
                 scope.editor.editableValue = scope.value;
-               // scope.lastEdited = true;
                 setTimeout(function () {
                     // element.find('input')[0].focus();
                     //element.find('input').focus().select(); // w/ jQuery
